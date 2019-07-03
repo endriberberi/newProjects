@@ -1,0 +1,56 @@
+<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+<div class="item-content {{enable_edit_class}}" {{enable_edit_attr}}>
+	<If condition="'{{DC_thumbnail_display}}' == 'yes' && {{dp_image_ID}}>0">
+		<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+		<If condition="'{{linkToimage}}' == 'yes'">
+		<a title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+			<img class="img-lg" src="{{link_url}}" alt=""/>
+		</a>
+		</If>
+		<If condition="'{{linkToimage}}' != 'yes'">
+			<img class="img-lg" src="{{link_url}}" alt=""/>
+		</If>
+		</Grid>
+	</If>
+
+	<div class="media-body">
+		<If condition="'{{linkToTitle}}' == 'yes'">
+			<a  title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}" class="media-heading text-bold">
+			{{titleToDisplay}}
+			</a>
+		 </If>
+		<If condition="'{{linkToTitle}}' != 'yes'">
+			{{titleToDisplay}}
+		 </If>
+		<If condition="'{{DC_date_display}}' == 'yes' || '{{DC_time_display}}' == 'yes' || '{{{DC_sourceauthor_display}}' == 'yes' || '{{DC_source_display}}' == 'yes'">
+		<div class="media-body">
+    		<ul class="list-inline list-inline-separate text-size-mini text-muted">
+    			<If condition="'{{DC_sourceauthor_display}}' == 'yes' && '{{dp_author}}'=='yes'">
+				<li>{{_DC_sourceauthor_label}}: {{AuthorToDisplay}}</li> 
+				</If>
+				<If condition="'{{DC_source_display}}' == 'yes' && '{{dp_source}}'=='yes'">
+				<li>{{_DC_source_label}}: {{sourceToDisplay}}</li>
+				</If>
+				<If condition="'{{DC_date_display}}' == 'yes'">
+				<li>{{source_creation_date}}</li>
+				</If>
+				<If condition="'{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes'">
+				<li>{{source_creation_time}}</li>
+				</If>
+    		</ul>
+    	</div>
+		</If>
+
+		<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+		{{abstractToDisplay}}
+		</If>
+		<If condition="'{{DC_content_display}}' == 'yes' && '{{dp_content}}' == 'yes'">
+			<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html" />
+		</If>
+		<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+		</br>
+			<a href="{{hrefToDocOther}}" role="button" class="pull-left">{{labelUserDefinedLink}}<i class="icon-arrow-right14 position-right"></i></a>
+		</If>
+</div>
+</div>

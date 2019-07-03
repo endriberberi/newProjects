@@ -1,0 +1,42 @@
+<WebBox ID="form_notification" MODE="Dynamic">
+<Include SRC="{{./}}../templates/template_1.html"/>
+
+<script language="javascript1.2">
+  data_sot                  = '{{data_sot}}';
+
+  jo_me_e_madhe_se_mesg     = '{{jo_me_e_madhe_se_mesg}}';
+  jo_me_e_vogel_se_mesg     = '{{jo_me_e_vogel_se_mesg}}';
+  jo_me_e_madhe_se_sot_mesg = '{{jo_me_e_madhe_se_sot_mesg}}';
+
+  date_of_completion_mesg   = '{{date_of_completion_mesg}}';
+  person_birthday_mesg      = '{{person_birthday_mesg}}';
+  date_clinical_signs_mesg  = '{{date_clinical_signs_mesg}}';
+  date_of_visit_mesg        = '{{date_of_visit_mesg}}';
+  date_hospitalization_mesg = '{{date_hospitalization_mesg}}';
+  dead_date_mesg            = '{{dead_date_mesg}}';
+
+  var elm_class_name        = "form-control";
+  var elm_class_filter      = "kw-list-controller";
+
+  var tr_nr                 = 100;
+  var var_url_graphics      = "{{APP_URL}}graphics/";
+
+  var fshi_mesg             = "{{fshi_mesg}}";
+  var del_row_confirm_mesg  = "{{del_row_confirm_mesg}}";
+
+  nr_regjistrit_mesg     = "{{nr_regjistrit_mesg}}";
+  dt_mostres_mesg        = "{{dt_mostres_mesg}}";
+  lloji_mostres_mesg     = "{{lloji_mostres_mesg}}";
+  testi_mesg             = "{{testi_mesg}}";
+  rezultati_mesg         = "{{rezultati_mesg}}";
+  data_e_rezultatit_mesg = "{{data_e_rezultatit_mesg}}";
+  laboratori_mesg        = "{{laboratori_mesg}}";
+
+  var f_app_array_js     = new Array();
+
+  {{script_js_in_page}}
+</script>
+
+<script src="{{./}}form_notification.js" type=text/javascript></script>
+
+</WebBox>

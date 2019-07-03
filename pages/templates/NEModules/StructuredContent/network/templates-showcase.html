@@ -1,0 +1,106 @@
+<div class="showcase-template">
+<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+<!--
+[display_prop] => Array
+(
+	[1] => dp_title	=="yes"
+	[2] => dp_desc	=="yes"
+	[3] => dp_content	=="yes"
+	[4] => dp_smallImg	=="yes"
+	[5] => dp_bigImg	=="yes"
+)
+	linkToTitle=="yes"
+	linkToimage=="yes"
+	dp_labelUserDefinedLink=="yes"
+	labelUserDefinedLink  - label i linkut
+-->
+<Grid gridId="Grid_StructuredContent">
+	<IfEmpty>
+	<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+	</IfEmpty>
+	<Header>
+		<div class="row">
+		</Header>
+		<!-- 		 		<div class="col-md-4">
+					<If condition="'{{dp_smallImg}}' == 'yes'">
+						<If condition="'{{targetUsedFromMakeLink}}' == 'docAttached' && '{{asset_id}}'>0">
+							<Grid gridId="DocCachedInfo_{{asset_id}}">
+								<a title="{{titleToAlt}}" data-title="{{titleToAlt}}" target="_blank"
+										class="line-clamping view-{{ico_type}} item-title" data-key="{{identifier_type}}"
+										data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+										data-url="{{identifier_key}}" href="{{stream_url}}" target="_blank">
+										<img class="d-flex mr-3 img-fluid" src="{{img_small_id_src}}" alt="{{titleToAlt}}">
+								</a>
+							</Grid>
+						</If>
+						<If condition="'{{targetUsedFromMakeLink}}' != 'docAttached' || '{{asset_id}}'==0">
+							<a title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+									<img class="d-flex mr-3 img-fluid" src="{{img_small_id_src}}"  alt="{{titleToAlt}}">
+							</a>
+						</If>
+					</If>
+					<If condition="'{{dp_smallImg}}' != 'yes'">
+						<img class="d-flex mr-3 img-fluid" src="{{link_url}}" alt="{{titleToAlt}}">
+					</If>
+		</div> -->
+		<div class="col-lg-4">
+		<If condition="'{{dp_smallImg}}' == 'yes'">
+		<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+			<If condition="'{{linkToimage}}' == 'yes'">
+			<a href="{{hrefToDocOther}}"  title="{{titleToAlt}}">
+				<img class="img-fluid" src="{{link_url}}" alt=""/>
+			</a>
+			</If>
+			<If condition="'{{linkToimage}}' != 'yes'">
+			<img class="img-fluid" src="{{link_url}}" alt=""/>
+			</If>
+		</Grid>
+		</If>
+		</div>
+		<div class="col-lg-12 mt-2">
+			<h4 class="card-title">
+				<If condition="'{{dp_title}}' == 'yes'">
+					<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+					<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+						{{titleToDisplay}}
+					</a>
+					</If>
+					<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+						{{titleToDisplay}}
+					</If>
+				 </If>
+
+				</h4>
+			<If condition="'{{dp_desc}}' == 'yes'">
+			<div class="bodytext"><strong>{{description}}</strong></div>
+			</If>
+			<If condition="'{{dp_content}}' == 'yes'">
+			<div class="bodytext">{{fullcontent}}</div>
+			</If>
+
+
+					<If condition="'{{dp_labelUserDefinedLink}}' == 'yes' && '{{exist_link}}' == 'yes'">
+						<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}" role="button" class="btn btn-primary">{{labelUserDefinedLink}}</a>
+					</If>
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		<Separator>
+		<div class="col-lg-12"><hr/></div>
+		</Separator>
+		<Footer>
+		<Include SRC="{{NEMODULES_PATH}}ListItemCollector/network/partials/list_footer.html"/>
+		</div>
+	</Footer>
+</Grid>
+</div>

@@ -1,0 +1,36 @@
+<If condition=" '{{display_eventStartDate}}' == 'yes' || ('{{display_eventEndDate}}' == 'yes' && '{{flagToCntPeriod}}' == 'diffdate') || ( '{{display_eventTime}}' == 'yes' && '{{dp_eventTime}}' == 'yes') || ('{{display_eventPeriodText}}' == 'yes' && '{{event_timing_text}}' != '')">
+	<table class="clearfix mb-1 w-100">
+		<td class="align-top pr-2" style="white-space: nowrap;">
+			<strong><span class="fa fa-calendar">&nbsp;</span> {{extrasLabels_dateblock}} </strong>
+		</td>
+		<td class="w-100">
+			<If condition=" '{{display_eventStartDate}}' == 'yes' || ('{{display_eventEndDate}}' == 'yes' && '{{flagToCntPeriod}}' != 'noEndDate') ">
+				<div class="d-inline-block mr-2">
+					<If condition=" '{{display_eventStartDate}}' == 'yes' ">
+					{{eventStartDate}}
+					</If>
+					<If condition="'{{display_eventStartDate}}' == 'yes' && '{{display_eventEndDate}}' == 'yes' && '{{flagToCntPeriod}}' == 'diffdate'">
+					 -
+					</If>
+					<If condition="'{{display_eventEndDate}}' == 'yes' && '{{flagToCntPeriod}}' == 'diffdate'">
+					{{eventEndDate}}
+					</If>
+				</div>
+			</If>
+
+			<If condition="'{{display_eventTime}}' == 'yes' && '{{dp_eventTime}}' == 'yes'">
+				<div class="d-inline-block">
+					<span class="fa fa-clock-o">&nbsp;</span> {{eventStartTime}}
+					<If condition="'{{dp_eventEndTime}}' == 'yes'">
+					- {{eventEndTime}}
+					</If>
+				</div>
+			</If>
+			<If condition="'{{display_eventPeriodText}}' == 'yes' && '{{event_timing_text}}' != ''">
+				<div>
+					<span class="fa fa-info-circle text-primary"></span> {{event_timing_text}}
+				</div>
+			</If>
+		</td>
+	</table>
+</If>

@@ -1,0 +1,77 @@
+<WebBox ID="AssetFileIcons" Type="Service" MODE="Dynamic">
+<Grid gridId="DocCachedInfo_{{asset_fileid}}">
+<div class="allicons">
+		<If condition="'{{allowed_preview}}' == 'yes'">
+		<a  title="{{_DA_preview_icon}}"  data-title=" {{file_name_cached}}"
+			data-key="{{identifier_type}}" data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+			data-url="{{identifier_key}}" href="{{stream_url}}"
+			class="pull-right text-danger ic_pos view-{{ico_type}}">
+	        <If condition="'{{extension}}' == 'link-ref-play'">
+			<i class="fa fa-fw fa-play item-action-icon"></i>
+			</If>
+	        <If condition="'{{extension}}' == 'ref' || '{{extension}}' == 'link-ref'">
+			<i class="fa fa-fw fa-external-link item-action-icon"></i>
+			</If>
+			<If condition="'{{extension}}' == 'pdf'">
+			<i class="fa fa-fw fa-external-link-square item-action-icon"></i>
+			</If>
+			<If condition="'{{extension}}' == 'mp4' || '{{extension}}' == 'mp3'">
+				<i class="fa fa-fw fa-play item-action-icon"></i>
+			</If>
+			<If condition="'{{extension}}' == 'html'">
+				<i class="fa fa-fw fa-external-link item-action-icon"></i>
+			</If>
+			<If condition="'{{ico_type}}' == 'image'">
+				<i class="fa fa-fw fa-picture-o item-action-icon"></i>
+			</If>
+		</a>
+		</If>
+		<If condition="'{{allowed_preview}}' == 'no'">
+		<a  title="{{_previewnotallowed}}" href="javascript:;" class="pull-right">
+				<i class="fa fa-fw fa fa-external-link disabled item-action-icon" ></i>
+		</a>
+		</If>
+		<a class="pull-right ic_pos" data-placement="left"  title="{{_DA_info_icon}}"
+							data-viewport="body"
+							data-container="body"
+							data-selector="true"
+							data-bs-modal="true"
+							data-modal-style="compact"
+							data-modal-footer="true"
+							href="javascript:void(0);">
+
+			<div class="modal-content-holder">
+				<div class="popover-content_{{asset_id}} ">
+							<address class="adrnopadding">
+					<Grid gridId="DocCachedInfo_{{asset_id}}">
+						<dl class="dl-horizontal inverted">
+							<dt>{{_DA_filename}}:</dt>
+							<dd><span class="elipsis" style="width:100%; display: inline-block;">{{file_name_cached}}</span></dd>
+							<dt>{{_DA_mimetype}}:</dt>
+							<dd>{{mimetype}}</dd>
+							<dt>{{_DA_filesize}}:</dt>
+							<dd>{{file_size}}</dd>
+							<If condition="'{{ico_type}}' == 'image'">
+							<dt>{{_DA_dimension}}:</dt>
+							<dd>{{file_width}} X {{file_height}} [px]</dd>
+							</If>
+							<If condition="'{{ico_type}}' == 'audio' || '{{ico_type}}' == 'video'">
+							<dt>{{_DA_duration}}:</dt>
+							<dd>{{file_duration}} [sec.]</dd>
+							</If>
+						</dl>
+					</Grid>
+				</div>
+			</div>
+			<i class="fa fa-fw fa-info-circle item-action-icon"></i>
+		</a>
+		<a class="pull-right ic_pos download-item" data-id="{{CID}}" href="{{link_url}}" target="_blank">
+			<If condition="'{{allowed_download}}' == 'no'">
+				<i class="fa fa-fw fa-download disabled download-item mr-2 item-action-icon" data-id="{{CID}}"  title="{{_DA_downloadunavailable}}"></i>
+			</If>
+			<If condition="'{{allowed_download}}' == 'yes'">
+				<i class="fa fa-fw fa-download item-action-icon"  title="{{_DA_download_icon}}"></i>
+			</If>
+		</a>
+</div>
+</Grid>

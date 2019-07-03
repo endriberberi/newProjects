@@ -1,0 +1,178 @@
+
+<WebBox ID="MainContainer" Type="RegionContainer">
+
+
+<!-- Page header -->
+<div id="page-header" class="page-header bg-white">
+	<!-- Main navbar -->
+	<div id="primary-navbar" class="navbar navbar-fixed-top fixed-always navbar-inverse {{paletevalue}}">
+		<div class="navbar-header">
+
+
+
+			<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+
+			<ul class="nav navbar-nav pull-right visible-xs-block">
+				<li><a data-target="#navbar-search"><i class="icon-search4"></i></a></li>
+				<li><a data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-menu7"></i></a></li>
+				<li class="dropdown-user">
+					<a data-toggle="collapse" data-target="#navbar-third-toggle" class="no-padding-right">
+						<!-- SI AND NEM-->
+
+						<nav id="headerControls" class="navbar navbar-toggleable-md top-navigation">
+							<div class="collapse navbar-collapse">
+								<a class="dropdown-toggle no-padding-right" data-toggle="dropdown">
+						<img src="graphics/demo/users/a.loloci-user.jpg" alt="">
+						<i class="caret"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+						<li>
+							<a href="#">
+								<i class="icon-graduation"></i> <span class="hidden-xs">My Trainings</span>
+								<span class="position-right visible-xs-inline-block">My Trainings</span>
+								<i class="icon-arrow-right22 pull-right visible-xs"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-certificate"></i> <span class="hidden-xs">My Assessments</span>
+								<span class="position-right visible-xs-inline-block">My Assessments</span>
+								<i class="icon-arrow-right22 pull-right visible-xs"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-books"></i> <span class="hidden-xs">My Reading Basket</span>
+								<span class="position-right visible-xs-inline-block">My Reading Basket</span>
+								<i class="icon-arrow-right22 pull-right visible-xs"></i>
+							</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#">
+								<i class="icon-statistics"></i> <span class="hidden-xs">My Team Results</span>
+								<span class="position-right visible-xs-inline-block">My Team Results</span>
+								<i class="icon-arrow-right22 pull-right visible-xs"></i>
+							</a>
+						</li>
+
+						<li class="divider"></li>
+						<li>
+							<a href="#">
+								<i class="icon-user"></i> <span class="hidden-xs">My Account Info</span>
+								<span class="position-right visible-xs-inline-block">My Account Info</span>
+								<i class="icon-arrow-right22 pull-right visible-xs"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-vcard"></i> <span class="hidden-xs">My profile</span>
+								<span class="position-right visible-xs-inline-block">My profile</span>
+								<i class="icon-arrow-right22 pull-right visible-xs"></i>
+							</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#">
+								<i class="icon-switch2"></i> <span class="hidden-xs">Logout</span>
+								<span class="position-right visible-xs-inline-block">Logout</span>
+							</a>
+						</li>
+								</ul>
+							</div>
+						</nav>
+
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+
+		<!-- SEARCH-->
+
+		<Include SRC="{{./}}SearchArea/SearchArea.html"/>
+
+		<!-- SEARCH-->
+
+
+		<!-- HeaderModulesArea-->
+				<div class="navbar-collapse collapse pull-right" id="navbar-mobile">
+					<div class="navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<?php
+									include NEMS_PATH.'NotificationsModule/NotificationsModule.php';
+								?>
+							</li>
+							<li class="dropdown">
+								<?php
+									include NEMS_PATH.'MyAssignments/MyAssignments.php';
+								?>
+							</li>
+							<li class="dropdown dropdown-user">
+								<?php
+									include NEMS_PATH.'UserProfileModule/UserProfileModule.php';
+								?>
+							</li>
+						</ul>
+					</div>
+				</div>
+		<!-- HeaderModulesArea-->
+
+
+
+
+
+
+
+	</div>
+	<!-- /main navbar -->
+
+	<!-- Second navbar -->
+	<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+	<!-- /second navbar -->
+
+	<!-- Page header content -->
+	<!-- includePageHeaderArea.php -->
+	<!-- /page header content -->
+
+</div>
+<!-- /page header -->
+
+		<div class="page-container">
+			<div class="page-content">
+				<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+				<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/MainContent.html"/>
+				<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+			</div>
+		</div>
+
+
+<!-- Footer -->
+<div class="navbar navbar-inverse overflow-hidden footer bg-grey-700" id="footer">
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="navbar-text text-center text-left-md">
+				<ul class="list-inline no-margin">
+					<li><a class="navbar-link" href="#">About Portal</a></li>
+					<li><a class="navbar-link" href="#">Terms & Conditions</a></li>
+					<li><a class="navbar-link" href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="navbar-text text-center text-right-md full-width">
+				&copy; 2017. <a href="#" class="navbar-link">Vodafone M-Pesa</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /footer -->
+
+
+
+
+	<Include SRC="{{./}}footer_includes.html"/>
+</WebBox>

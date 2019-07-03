@@ -1,0 +1,148 @@
+<Grid gridId="notif_{{idstemp}}">
+
+<a class="navbar-link dropdown-toggle"  data-toggle="dropdown" aria-expanded="true"
+title="{{slogan_title}}">
+<If condition="'{{slogan_icon_show}}' == 'yes'">
+<i class="{{slogan_icon}}"></i>
+</If>
+<If condition="'{{slogan_icon_show}}' != 'yes'">
+<i class="icon-bell2"></i>
+</If>
+<span class="visible-xs-inline-block position-right">{{slogan_title}}</span>
+<If condition="'{{nr_total}}'=='0'">
+<!--span class="label label-warning" title="{{notification_empty}}">{{badge_text}}</span-->
+</If>
+<If condition="'{{nr_total}}'>'0'">
+
+	<If condition="'{{nr_new}}'=='0'">
+	<!--span class="label label-warning" title="{{badge_text_empty}}">{{badge_text}}</span-->
+	</If>
+	<If condition="'{{nr_new}}'=='1'">
+	<span class="status-mark border-danger-300 hidden-xs"  title="{{badge_text}}: {{badge_text_multi}}"></span>
+
+	</If>
+	<If condition="'{{nr_new}}'>'1'">
+	<span class="status-mark border-danger-300 hidden-xs"  title="{{badge_text}}: {{badge_text_multi}}"></span>
+	</If>
+</If>
+<i class="caret visible-xs-inline-block"></i>
+
+</a>
+<div class="dropdown-menu dropdown-content width-300">
+	<div class="dropdown-content-heading">
+		{{slogan_title}} 
+		<If condition="'{{nr_total}}'>'0'">
+			<span class="text-muted">- 
+				<If condition="'{{nr_new}}'=='0'">
+				{{badge_text_empty}}
+				</If>
+				<If condition="'{{nr_new}}'=='1'">
+				{{badge_text_one}}
+				</If>
+				<If condition="'{{nr_new}}'>'1'">
+				{{badge_text_multi}}
+				</If>
+			</span>
+		</If>
+		
+		<If condition="'{{nr_total}}'>'0'">
+		<ul class="icons-list">
+			<li>
+				<a href="javascript:void(0);" title="{{_delete_all_items}}"
+					data-ajax="true"
+					data-url="&apprcss=notifications&action=deleteAll&itemId="
+					data-trigger-event-after="rfrBadge"
+					data-notify-confirm="{{delete_all_notifications_confirm}}"
+				>
+					<i class="icon-trash"></i>
+				</a>
+			</li>
+		</ul>
+		</If>
+	</div>
+
+	<If condition="'{{nr_total}}' == '0'">
+		<div class="p-30 pt-15 text-grey-300 text-center">
+			<div class="mb-5">
+				<a class="btn border-grey-300 text-grey-300 btn-flat btn-rounded btn-xs btn-icon cursor-default icon-2x" style="opacity: .5;"><i class="icon-checkmark4"></i></a>
+			</div>
+			<span class="text-size-large">
+				{{notification_empty}}
+			</span>
+		</div>
+	</If>
+	<Grid gridId="getUserNotification_{{ses_userid}}">
+		<Header>
+			<ul class="media-list dropdown-content-body width-350">
+		</Header>
+		<li class="media">
+			<div class="media-left">
+				<Var name="is_image_icon_class">('{{notificationIcon}}' == 'image' ? 'no-padding no-border' : '')</Var>
+				<Var name="has_category_class">('{{category_class}}' != '' ? '{{category_class}}' : 'bg-success-400')</Var>
+				<a class="btn {{has_category_class}} btn-rounded btn-icon btn-md {{is_image_icon_class}}"
+					data-bs-modal="true"
+					data-modal-ajax="true"
+					data-url="&apprcss=notifications&action=viewItem&idstemp={{idstemp}}&itemId={{id_alert}}#alertInfo"
+					data-modal-style="compact"
+					data-title="{{modal_title_details}}"
+					<If condition="'{{mesage_read}}' != 'y'">
+					data-trigger-event-after="rfrBadge"
+					</If>
+				>
+				<If condition="'{{notificationIcon}}' == 'default'">
+					<!--a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i class="icon-mention"></i></a-->
+					<i class="icon-paperplane"></i>
+				</If>
+				<If condition="'{{notificationIcon}}' == 'icon'">
+					<i class="{{category_icon}}"></i>
+				</If>
+				<If condition="'{{notificationIcon}}' == 'image'">
+					<img src="{{imageSrc}}" class="img-circle img-xs" alt="">
+				</If>
+				</a>
+			</div>
+			<Var name="mesage_read_class">('{{mesage_read}}' == 'y' ? '' : 'text-bold')</Var>
+			<Var name="mesage_read_indicator">('{{mesage_read}}' == 'y' ? '' : '<span class="position-right"><span class="status-mark border-danger-300 hidden-xs"></span></span>')</Var>
+			<div class="media-body">
+					<a class="text-default {{mesage_read_class}}"
+						data-bs-modal="true"
+						data-modal-ajax="true"
+						data-url="&apprcss=notifications&action=viewItem&idstemp={{idstemp}}&itemId={{id_alert}}#alertInfo"
+						data-modal-style="compact"
+						data-title="{{modal_title_details}}"
+						<If condition="'{{mesage_read}}' != 'y'">
+						data-trigger-event-after="rfrBadge"
+						</If>
+					>
+						{{subjekti}}{{mesage_read_indicator}}
+					</a>
+				<div class="media-annotation">{{record_timestamp}}</div>
+			</div>
+			<div class="media-right media-middle">
+				<ul class="icons-list text-nowrap">
+					<li>
+						<a href="#" title="{{_delete_item}}"
+							data-ajax="true"
+							data-url="&apprcss=notifications&action=delete&itemId={{id_alert}}"
+							data-trigger-event-after="rfrBadge"
+							data-notify-confirm="{{delete_notification_confirm}}"
+						>
+							<i class="icon-cross3"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<Footer>
+			</ul>
+		</Footer>
+	</Grid>
+	<a style="display: none;"
+		href="javascript:void(0)"
+		data-ajax="true"
+		data-url="&apprcss=notifications&action=refreshBadge&idstemp={{idstemp}}"
+		data-event-handler="rfrBadge"
+		data-target="#notifications-dropdown"
+	></a>
+</div>
+</Grid>

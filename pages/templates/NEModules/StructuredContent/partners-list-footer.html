@@ -1,0 +1,22 @@
+<div class="partnerfooterlist">
+	<If condition="'{{slogan_title}}' != ''">
+		<h4>{{slogan_title}}</h4>
+	</If>
+	<Grid gridId="Grid_StructuredContent">
+		<IfEmpty>
+	<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+	</IfEmpty>
+		
+		<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+			<If condition="'{{exist_link}}' == 'yes' && '{{linkToimage}}' == 'yes' ">
+			<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}"  title="{{titleToAlt}}">
+				<img src="{{link_url}}" alt="{{titleToAlt}}" style="margin-right: 10px; max-width: 100px; height: auto;" />
+			</a>
+			</If>
+			<If condition="'{{exist_link}}' != 'yes' || '{{linkToimage}}' != 'yes'">
+				<img src="{{link_url}}" alt="{{titleToAlt}}" style="margin-right: 10px; max-width: 100px; height: auto;" />
+			</If>
+		</Grid>
+	</Grid>
+	
+</div>

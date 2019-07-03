@@ -1,0 +1,52 @@
+<div class="datatable-footer row pt-5">
+
+<Grid gridId="Grid_nav_from_to">
+	<Header>
+	</Header>
+          	<div class="col-lg-3">
+				<div class="dataTables_info">{{rec_start}} {{to_mesg}} {{rec_end}} {{of_mesg}} {{rec_total}} {{rec_label}}</div>
+			</div>
+	<Footer>
+	</Footer>
+</Grid>
+
+<Grid gridId="Grid_nav_browse_link">
+	<Header>
+		<div class="col-lg-5">
+			<div class="dataTables_paginate paging_simple_numbers" style="float:none;text-align:center;">
+	</Header>
+				<a class="paginate_button previous {{prev_disabled}}" tabindex="0" id="DataTables_Table_0_previous" href="JavaScript:{{prev_trigger_function}}({{prev_trigger_function_params}})">&larr;</a>
+
+					<span>
+						<Grid gridId="Grid_nav_browse_page">
+							<a class="paginate_button {{current}}" tabindex="0" href="JavaScript:{{trigger_function}}({{trigger_function_params}})">{{label}}</a>
+						</Grid>
+					</span>
+				<a class="paginate_button next {{next_disabled}}" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" id="DataTables_Table_0_next" href="JavaScript:{{next_trigger_function}}({{next_trigger_function_params}})">&rarr;</a>
+
+	<Footer>
+			</div>
+		</div>
+	</Footer>
+</Grid>
+
+<Grid gridId="Grid_nav_rec_page_att">
+	<Header>
+       	<div class="col-lg-4">
+			<div class="form-inline pull-right">
+				<div class="form-group">
+	</Header>
+					<label>{{label}}:</label>
+					<select class="form-control input-xs input-xs" name="{{name}}"  onchange="{{trigger_function}}({{trigger_function_params}}, this.value)">
+
+						<Grid gridId="Grid_nav_rec_page_val">
+       						<option value="{{value}}"  {{selected}}>{{value}}</option>
+						</Grid>
+					</select>
+	<Footer>
+				</div>
+			</div>
+		</div>
+	</Footer>
+</Grid>
+</div>

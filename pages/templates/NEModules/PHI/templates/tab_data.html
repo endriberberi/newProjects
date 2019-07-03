@@ -1,0 +1,67 @@
+<Grid gridId="Grid_tab_data">
+
+	<Header>
+		<table class="table dataTable table-hover table-bordered table-striped datatable-scroll-y datatable-header table-condensed pt-5" style="width: 100%; padding-top: 0px;">
+	</Header>
+
+			<If condition="'{{tag}}' == 'tr'">
+				<tr>
+			</If>
+
+			<If condition="('{{tag}}' == 'td') || ('{{tag}}' == 'th')">
+				<{{tag}} {{tag_att}}>
+
+					<If condition="'{{link}}' == 'Y'">
+						<a {{link_att}}
+
+							<If condition="'{{link_data_modal}}' == 'Y'">
+
+								data-bs-modal="true"
+
+								<If condition="'{{link_modal_iframe}}' != 'true'">
+									data-modal-ajax="true"
+								</If>
+								<If condition="'{{link_modal_iframe}}' == 'true'">
+									data-modal-iframe="{{link_modal_iframe}}"
+								</If>
+
+								data-modal-size="modal-lg"
+								data-modal-style="compact"
+								data-url-custom="true"
+								data-url="{{link_data_url}}"
+								data-title="{{link_data_title}}"
+								data-modal-width="{{link_modal_width}}"
+								data-modal-height="{{link_modal_height}}"
+							</If>
+						>
+					</If>
+
+					<If condition="'{{data_type}}' == 'label'">
+						{{label}}
+					</If>
+
+					<If condition="'{{data_type}}' == 'icon'">
+						<If condition="'{{label}}' == 'icon_preview'">
+							<i title="{{preview_mesg}}" class="icon-square-up-right"></i>
+						</If>
+						<If condition="'{{label}}' == 'icon_edit'">
+							<i title="{{edito_mesg}}" class="icon-pencil7"></i>
+						</If>
+						<If condition="'{{label}}' == 'icon_select'">
+							<i title="{{select_mesg}}" class="icon-square-down-left"></i>
+						</If>
+					</If>
+
+					<If condition="'{{link}}' == 'Y'">
+						</a>
+					</If>
+				</{{tag}}>
+			</If>
+
+			<If condition="'{{tag}}' == 'tr_end'">
+				</tr>
+			</If>
+	<Footer>
+		</table>
+	</Footer>
+</Grid>

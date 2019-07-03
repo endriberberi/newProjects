@@ -1,0 +1,40 @@
+<If condition="'{{slogan_icon_show}}' == 'yes' || '{{slogan_description_show}}' == 'yes' || '{{slogan_title_exists}}' == 'yes' || '{{help_show}}' == 'yes'">
+    <div class="content-group heading-divided">
+		<If condition="'{{help_show}}' == 'yes'">
+			<div class="pull-right">
+				<a href="javascript:void(0);" class="button-icon jarviswidget-edit-btn has-popover additional-action" title="{{help_title}}"
+				data-placement="bottom" data-viewport="body" data-container="body">
+				<i class="icon-help"></i>
+				<div class="popover-content-holder" style="display: none;">
+					{{help_description}}
+				</div>
+				</a>
+			</div>
+		</If>
+		<h2 class="panel-title text-lg mb-0 display-inline-block">
+			<If condition="'{{slogan_icon_show}}' == 'yes'">
+				<i class="position-left {{slogan_icon}}"></i>
+			</If>
+			<If condition="'{{slogan_title_exists}}' == 'yes'">
+				{{slogan_title}}
+			</If>
+		</h2>
+	</div>
+		<If condition="'{{slogan_description_show}}' == 'yes'">
+			<div class="content-group">
+				<p>{{slogan_description}}</p>
+			</div>
+		</If>
+</If>
+<script>
+	modules.push('enable-popover');
+</script>
+<style>
+	.close.popover-close-btn{
+		padding: 10px;
+	}
+	i.help-icon {
+		font-size: 18px;
+		padding-top: 10px;
+	}
+</style>

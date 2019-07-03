@@ -1,0 +1,15 @@
+
+	<If condition="'{{show_footer_pageLengthControl}}' == 'yes'">
+		<div class="pull-right">
+			<label class="select mt-5"  style="width: 100%;">
+	        	<select class="selectboxit-btn select-category"
+	        		name="rp" valid="0,0,0,0,0,0" etiketa="rp">
+	        		<option value="">ALL</option>
+	        		<Grid gridId="itemsPerPageGrid">
+	        			<Var name="isChecked">('{{rp}}' == '{{id}}' ? 'selected': '')</Var>
+	        			<option value="{{id}}" {{isChecked}}>{{label}}</option>
+	        		</Grid>
+        		</select><i></i>
+        	</label>	
+        </div>
+	</If>

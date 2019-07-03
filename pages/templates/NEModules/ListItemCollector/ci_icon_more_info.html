@@ -1,0 +1,62 @@
+<a class="pull-right text-danger ic_pos" data-placement="left"  title="[{{ecc_reference}}]. {{ew_title}}"
+		<If condition="'{{ci_type}}' == 'RI'">
+			data-title="[{{ecc_reference}}]. {{ew_title}}"  data-original-title="[{{ecc_reference}}]. {{ew_title}}"
+		</If>
+		<If condition="'{{ci_type}}' == 'EQ' || '{{ci_type}}' == 'SP'">
+			data-title="[{{seqNr}}]. {{ew_title}}"  data-original-title="[{{seqNr}}]. {{ew_title}}"
+		</If>
+		<If condition="'{{ci_type}}' != 'RI' && '{{ci_type}}' != 'EQ' && '{{ci_type}}' != 'SP'">
+			data-title="{{ew_title}}"  data-original-title="{{ew_title}}"
+		</If>
+
+data-viewport="body"
+data-container="body"
+data-selector="true"
+data-bs-modal="true"
+data-modal-style="compact"
+data-modal-footer="true"
+href="javascript:void(0);">
+
+	<div class="modal-content-holder">
+		<div class="popover-content_{{ecc_doc_id}} ">
+					<address class="adrnopadding">
+
+
+					<Grid gridId="DocCachedInfo_{{ecc_doc_id}}">
+					<dl class="dl-horizontal inverted">
+					  <dt>{{_file_name}}:</dt>
+					  <dd><span class="elipsis" style="width:100%; display: inline-block;">{{file_name_cached}}</span></dd>
+
+					  <dt>{{_file_type}}:</dt>
+					  <dd>{{mimetype}}</dd>
+
+					  <dt>{{_file_size}}:</dt>
+					  <dd>{{file_size}}</dd>
+					  <If condition="'{{ico_type}}' == 'image'">
+					  <dt>{{_dimesions}}:</dt>
+					  <dd>{{file_width}} X {{file_height}} [px]</dd>
+					  </If>
+					  <If condition="'{{ico_type}}' == 'audio' || '{{ico_type}}' == 'video'">
+					  <dt>{{_duration}}:</dt>
+					  <dd>{{file_duration}} [sec.]</dd>
+					</If>
+					</dl>
+
+					<If condition="'{{editMode}}' == 'yes'">
+						<hr class="simple">
+						<dl class="dl-horizontal inverted">
+						  <dt>{{_Version_desc}}:</dt>
+						  <dd>{{version_id}}</dd>
+						<If condition="'{{lastUser}}' != ' '">
+							<dt>{{_modified_by}}:</dt>
+							<dd>{{lastUser}}</dd>
+						  </If>
+						  <dt>{{_at_date}}:</dt>
+						  <dd>{{timestamp}}</dd>
+						</dl>
+					</If>
+					</Grid>
+		</div>
+	</div>
+	<i class="fa fa-fw fa-info-circle"></i>
+</a>

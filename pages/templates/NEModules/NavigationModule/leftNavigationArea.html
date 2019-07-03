@@ -1,0 +1,62 @@
+<Grid gridId="GridAuthorNav_{{level_0}}_{{level_1}}_0_0_0">
+	<IfEmpty>
+	</IfEmpty>
+	<Header>
+			<ul class="nav navbar-nav collapse-menu">
+				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-square-right"></i></a></li>
+			</ul>
+		<div class="bg-ishp-primary sidebar sidebar-main">
+			<div class="sidebar-category sidebar-category-visible">
+				<ul class="navigation navigation-main navigation-accordion" role="menubar">
+				</Header>
+				<Grid gridId="GridAuthorNavData_{{keyIden}}">
+					<Var name="current">("{{isActive}}" == "actual" || "{{isActive}}" == "yes" ? 'active expanded' : '')</Var>
+					<Var name="isInCurrentPath">("{{isActive}}" == "actual" ? 'selected' : '')</Var>
+					<Var name="has-subnav">("{{nr_of_childs}}" > "0" ? 'has-ul' : 'no-subnav')</Var>
+					<Var name="content-arrow">("{{isActive}}" == "actual" ? 'minus' : 'plus')</Var>
+					<li role="menuitem" class="{{current}} {{isInCurrentPath}}" style="position: relative;">
+						<a class=" {{has-subnav}} " href="{{link}}"><i class="icon-{{boostrap_ico}}"></i>
+						<span class="dropdown-icon"></span>
+						<span>{{label}}</span>
+						</a>
+						<Grid gridId="GridAuthorNav_{{keyIden}}">
+							<Header>
+								<ul class="hidden-ul">
+								</Header>
+								<Grid gridId="GridAuthorNavData_{{keyIden}}">
+									<Var name="current">("{{isActive}}" == "actual" || "{{isActive}}" == "yes" ? 'active expanded' : '')</Var>
+									<Var name="isInCurrentPath">("{{isActive}}" == "actual" ? 'selected' : '')</Var>
+									<Var name="has-subnav">("{{nr_of_childs}}" > "0" ? 'has-subnav' : 'no-subnav')</Var>
+									<Var name="content-arrow">("{{isActive}}" == "actual" ? 'minus' : 'plus')</Var>
+									<li role="menuitem" class="{{current}} {{has-subnav}} {{isInCurrentPath}}" style="position: relative;">
+										<a class="has-ul" href="{{link}}">{{label}}</a>
+										<Grid gridId="GridAuthorNav_{{keyIden}}">
+											<Header>
+												<ul class="navigation navigation-main navigation-accordion">
+												</Header>
+												<Grid gridId="GridAuthorNavData_{{keyIden}}">
+													<Var name="current">("{{isActive}}" == "actual" ? 'active expanded' : '')</Var>
+													<Var name="isInCurrentPath">("{{isActive}}" == "actual" ? 'selected' : '')</Var>
+													<Var name="has-subnav">("{{nr_of_childs}}" > "0" ? 'has-subnav' : 'no-subnav')</Var>
+													<li role="menuitem" class="{{current}} {{no-subnav}}">
+														<a href="{{link}}">{{label}}</a>
+													</li>
+												</Grid>
+												<Footer>
+												</ul>
+											</Footer>
+										</Grid>
+									</li>
+								</Grid>
+								<Footer>
+								</ul>
+							</Footer>
+						</Grid>
+					</li>
+				</Grid>
+				<Footer>
+				</ul>
+			</div>
+		</div>
+	</Footer>
+</Grid>

@@ -1,0 +1,108 @@
+<If condition="'{{uId}}' != '2'">
+<Grid gridId="getUserInfo">	
+	<Var name="userFirstName">('{{show_user_FirstName}}'=='yes'?'{{FirstName}}':'')</Var>
+	<Var name="userSecondName">('{{show_user_LastName}}'=='yes'?'{{SecondName}}':'')</Var>
+	<a class="dropdown-toggle no-padding-right" data-toggle="dropdown">
+		<If condition="'{{show_user_picture}}' == 'yes'">
+	        <If condition="'{{doc_id}}'!=''">
+	        <img alt="{{userFirstName}} {{userSecondName}}" class="bordered"  src="{{APP_URL}}show_photo.php?file_id={{doc_id}}" style="left: 0;">
+	        </If>
+	        <If condition="'{{doc_id}}'==''">
+				<If condition="'{{default_user_picture}}' == 'image' && '{{userDefault_Image}}' >0 ">
+	        		<img alt="{{userFirstName}} {{userSecondName}}" class="bordered" src="{{APP_URL}}show_image.php?file_id={{userDefault_Image}}" style="left: 0;">
+	        	</If>
+				<If condition="'{{default_user_picture}}' == 'icon' && '{{userDefault_icon}}' != ''">
+					<i class="{{userDefault_icon}}"></i> 
+	        	</If>
+				<If condition="'{{default_user_picture}}' == 'userCredentials'">
+					<span class="user-initials">{{userCredentials}}</span>	
+	        	</If>
+	        </If>
+	    </If>
+	    <i class="caret"></i>
+	</a>
+</Grid>
+
+<ul class="dropdown-menu dropdown-menu-right">
+	<Grid gridId="categorizationGrid">
+		<If condition="'{{show_category_label}}' == 'yes'">
+			<li class="">{{categoryName}}</li>
+		</If>
+		<Grid gridId="categorizationItemsGrid_{{categoryId}}">
+			<Grid gridId="itemPropDataGrid_{{categoryId}}_{{itemId}}">
+				<li>
+					<If condition="'{{makeLink_title}}' == 'yes'">
+						<a id="register-trigger" title="{{titleToAlt}}" href="{{hrefTo}}" '{{modalParams}}'>
+							<If condition="'{{display_itemIcon}}' == 'yes' && '{{showManualCiIcon}}' != 'no'">
+				                <If condition="'{{showManualCiIcon}}' == 'icon'">
+				                	<i class="{{manualCiIcon}}"></i> 
+				            	</If>
+				                <If condition="'{{showManualCiIcon}}' == 'image' && '{{manualCiImage}}' > 0 ">
+				                	<img src="{{manualCiImageScr}}" class="img-circle img-xs" alt="">
+				            	</If>
+			            	</If>
+			            	<If condition="'{{display_itemLabel}}' == 'yes' && '{{hasCiLabel}}' == 'yes'">
+			                	{{manualCiLabel}}
+			                </If> 
+			            	<If condition="'{{hasCiLabel}}' != 'yes'">
+			                	{{titleToDisplay}}
+			                </If> 
+			            </a>
+		            </If>
+		            <If condition="'{{makeLink_title}}' != 'yes'">
+		            	<div id="register-trigger">
+		            		<If condition="'{{display_itemIcon}}' == 'yes' && '{{showManualCiIcon}}' != 'no'">
+				                <If condition="'{{showManualCiIcon}}' == 'icon'">
+				                	<i class="{{manualCiIcon}}"></i> 
+				            	</If>
+				                <If condition="'{{showManualCiIcon}}' == 'image' && '{{manualCiImage}}' > 0 ">
+				                	<img src="{{manualCiImageScr}}" class="img-circle img-xs" alt="">
+				            	</If>
+			            	</If>
+			            	<If condition="'{{display_itemLabel}}' == 'yes' && '{{hasCiLabel}}' == 'yes'">
+			                	{{manualCiLabel}}
+			                </If> 
+			            	<If condition="'{{hasCiLabel}}' != 'yes'">
+			                	{{titleToDisplay}}
+			                </If>		            		
+		            	</div>
+		            </If>
+				</li>
+			</Grid>
+		<Footer>
+		<If condition="'{{show_category_separator}}' == 'yes'">
+			<li class="divider"></li>
+		</If>
+		</Footer>
+		</Grid>
+	</Grid>
+	<Grid gridId="user_moduleGrid">
+		<li>
+			<If condition="'{{makeLink_title}}' == 'yes'">
+		        <a id="register-trigger" title="{{label}}" href="{{href}}" class="{{moduleClass}}">
+		            <i class="{{moduleIcon}}"></i> {{label}}
+		        </a>
+			</If>
+			<If condition="'{{makeLink_title}}' != 'yes'">
+				<div class="{{moduleClass}}">					
+	            	<i class="{{moduleIcon}}"></i> {{label}}
+				</div>
+			</If>
+	    </li>
+	</Grid>
+
+</ul>
+<script type="text/javaScript">
+    var _fill_required_data = '{{_fill_required_data}}';
+    var idstempLogout = '{{idstempLogout}}';
+    function onLogoutForm() {
+        var form = document.logoutForm;
+        GoTo("thisPage?event=none.logout(idstempLogout="+idstempLogout+")");
+    }
+</script>
+<script>
+    modules.push('logout');
+</script>
+</If>
+ 
+

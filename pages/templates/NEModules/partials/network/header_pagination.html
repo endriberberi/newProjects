@@ -1,0 +1,126 @@
+	<If condition="'{{show_header_pagination}}'=='yes'">
+	<nav style="text-align:right">
+		<div class="results-nav">
+			<div class="pagination">
+				<ul class="pagination">
+
+					<If condition="'{{global_cache_dynamic}}'=='Y'">
+						<li>
+						<If condition="'{{previewsPage}}'!=''">
+							<a title="{{_firstPage}}" href="{{hrefSearchResultNext}}?tid={{tid}}&ser={{objId}}&rpp=1&msv={{msvSrc}}" >
+								&#171;
+							</a>
+						</If>
+						</li>
+						<li>
+						<If condition="'{{previewsPage}}'!=''">
+							<a title="{{_previewsPage}}" href="{{hrefSearchResultNext}}?tid={{tid}}&ser={{objId}}&rpp={{previewsPage}}&msv={{msvSrc}}" class="previous">
+								&lt;
+							</a>
+						</If>
+						<If condition="'{{previewsPage}}'==''">
+						</If>
+						</li>
+						<NavTpl navID="gridDataSrc" blNoToDisplay="6" stepBack="5">
+							<Header>
+							</Header>
+							<If condition="'{{BlockNavNr}}'=='1'">
+								<li class="pages-start">
+							</If>
+							<If condition="'{{BlockNavNr}}'=='{{TotPage}}'">
+								<li class="pages-end">
+							</If>
+							<If condition="'{{BlockNavNr}}'>'1' && '{{BlockNavNr}}'<'{{TotPage}}'">
+								<li>
+							</If>
+							<a class="{{selClass}}" title="{{_Page}} {{BlockNavNr}}" href="{{hrefSearchResultNext}}?tid={{tid}}&ser={{objId}}&rpp={{BlockNavNr}}&msv={{msvSrc}}" >
+								{{BlockNavNr}}
+							</a>
+							</li>
+							<Footer>
+							</Footer>
+						</NavTpl>
+						<li>
+						<If condition="'{{nextPage}}' != ''">
+							<a title="{{_nextPage}}" href="{{hrefSearchResultNext}}?tid={{tid}}&ser={{objId}}&rpp={{nextPage}}&msv={{msvSrc}}" class="next">
+								&gt;
+							</a>
+						</If>
+						<If condition="'{{nextPage}}'==''">
+						</If>
+						</li>
+						<li>
+						<If condition="'{{nextPage}}'!=''">
+							<a title="{{_lastPage}}" href="{{hrefSearchResultNext}}?tid={{tid}}&ser={{objId}}&rpp={{TotPage}}&msv={{msvSrc}}">
+								&#187;
+							</a>
+						</If>
+						<If condition="'{{nextPage}}'==''">
+						</If>
+						</li>
+					</If>
+
+					<If condition="'{{global_cache_dynamic}}'!='Y'">
+						<li>
+						<If condition="'{{previewsPage}}'!=''">
+							<a title="{{_firstPage}}" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp=1;rp={{recPage}};msv={{msvSrc}};ser={{objId}};s_id={{s_id}};sns={{sns}};osns={{osns}})')" >
+								&#171;
+							</a>
+						</If>
+						<If condition="'{{previewsPage}}'==''">
+						</If>
+						</li>
+						<li>
+						<If condition="'{{previewsPage}}'!=''">
+							<a title="{{_previewsPage}}" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}};s_id={{s_id}};sns={{sns}};osns={{osns}})')" class="previous">
+								&lt;
+							</a>
+						</If>
+						<If condition="'{{previewsPage}}'==''">
+						</If>
+						</li>
+						<NavTpl navID="gridDataSrc" blNoToDisplay="6" stepBack="5">
+							<Header>
+							</Header>
+							<If condition="'{{BlockNavNr}}'=='1'">
+								<li class="pages-start">
+							</If>
+							<If condition="'{{BlockNavNr}}'=='{{TotPage}}'">
+								<li class="pages-end">
+							</If>
+							<If condition="'{{BlockNavNr}}'>'1' && '{{BlockNavNr}}'<'{{TotPage}}'">
+								<li>
+							</If>
+							<a class="{{selClass}}" title="{{_Page}} {{BlockNavNr}}" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{BlockNavNr}};rp={{recPage}};msv={{msvSrc}};ser={{objId}};s_id={{s_id}};sns={{sns}};osns={{osns}})')">
+								{{BlockNavNr}}
+							</a>
+							</li>
+							<Footer>
+							</Footer>
+						</NavTpl>
+						<li>
+						<If condition="'{{nextPage}}'!=''">
+							<a title="{{_nextPage}}" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}};s_id={{s_id}};sns={{sns}};osns={{osns}})')" class="next">
+								&gt;
+							</a>
+						</If>
+						<If condition="'{{nextPage}}'==''">
+						</If>
+						</li>
+
+						<li>
+						<If condition="'{{nextPage}}'!=''">
+							<a title="{{_lastPage}}" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{TotPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')">
+
+								&#187;
+							</a>
+						</If>
+						<If condition="'{{nextPage}}'==''">
+						</If>
+						</li>
+					</If>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</If>

@@ -1,0 +1,11 @@
+<Grid gridId="gridToLabelsListCollector">
+	<If condition="'{{show_header}}'=='yes'">
+		<Var name="col_class">( '{{show_header_info}}'=='yes' || '{{show_header_page_length}}'=='yes' ? 'col-4' : 'col-12' )</Var>
+		<If condition="'{{show_header_info}}'=='yes' ">
+			<div class="dataTables_info"role="status" aria-live="polite"> 
+				<span>{{show_header_info_label}}</span>
+			</div>
+		</If>
+	</If>
+</Grid>				
+				

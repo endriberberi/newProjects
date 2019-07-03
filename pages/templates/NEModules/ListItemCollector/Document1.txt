@@ -1,0 +1,291 @@
+<div class="content-wrapper">
+	<!-- <h4 class="content-group heading-divided">
+	Training Categories
+	<small class="display-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed congue erat.</small>
+</h4> -->
+
+<div class="row mt-10">
+
+
+
+
+
+<div class="row">
+	<div class="col-xs-4 col-sm-12">
+		<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+			<a class="text-white thumb" href="?page=trainingcategory">
+				</a>
+				
+				
+				<div class="thumb-hd-size category-3-gradient-b border-radius-double"><a class="text-white thumb" href="?page=trainingcategory">
+					</a><a title="AML Training &amp; Compliance" href="javascript:GoTo('thisPage?event=none.ch_state(k=96;kc=0,0,0,0,0;)');" target="">
+						<img class="card-img-top img-fluid" src="http://192.168.1.114/mpesa/rc/img/aml_compliance_icon_1.png" alt="">
+					</a>
+				</div>
+				<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+					<span class="text-left text-white">
+						<div class="px-20 text-left">
+							<h6 class="text-semibold no-margin-top hidden-xs">
+								AML Training &amp; Compliance
+							</h6>
+						</div>
+					</span>
+				</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="row">
+	<div class="col-xs-4 col-sm-12">
+		<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+			<a class="text-white thumb" href="?page=trainingcategory">
+				<div class="thumb-hd-size category-1-gradient-b border-radius-double">
+					<img class="valign-middle-xs" src="graphics/categories/functional-icon.png" alt="">
+				</div>
+				<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+					<span class="text-left text-white">
+						<div class="px-20 text-left">
+							<h6 class="text-semibold no-margin-top hidden-xs">
+								G2 Functional Training
+							</h6>
+						</div>
+					</span>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+			
+			
+			
+			
+			
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<div class="mb-20">
+			<div class="row">
+				<div class="col-xs-4 col-sm-12">
+					<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+						<a class="text-white thumb" href="?page=trainingcategory">
+							<div class="thumb-hd-size category-2-gradient-b border-radius-double">
+								<img class="valign-middle-xs" src="graphics/categories/general-product-icon.png" alt="">
+								<!-- <img src="graphics/categories/general-product.jpg" alt=""> -->
+							</div>
+							<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+								<span class="text-left text-white">
+									<div class="px-20 text-left">
+										<h6 class="text-semibold no-margin-top hidden-xs">
+											General M-Pesa Product Training
+										</h6>
+									</div>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-8 visible-xs-block">
+			        <div class="media-body">
+				        <div class="rows-2-max">
+				            <h6 class="media-heading text-bold no-margin">
+				            	<a href="?page=trainingcategory" class="text-default">General M-Pesa Product Training</a>
+				        	</h6>
+				    		<!-- <span class="display-block line-clamp-2">
+				    						            	Lorem ipsum dolor sit amet, consectetur adipiscing elit cras velit massa, ullamcorper sit amet sem in, viverra efficitur dolor.
+				    						            </span> -->
+				        </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<div class="mb-20">
+			<div class="row">
+				<div class="col-xs-4 col-sm-12">
+					<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+						<a class="text-white thumb" href="?page=trainingcategory">
+							<div class="thumb-hd-size category-3-gradient-b border-radius-double">
+								<img class="valign-middle-xs" src="graphics/categories/aml-compliance-icon.png" alt="">
+								<!-- <img src="graphics/categories/aml-compliance.jpg" alt=""> -->
+							</div>
+							<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+								<span class="text-left text-white">
+									<div class="px-20 text-left">
+										<h6 class="text-semibold no-margin-top hidden-xs">
+											AML Training &amp; Compliance
+										</h6>
+									</div>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-8 visible-xs-block">
+			        <div class="media-body">
+				        <div class="rows-2-max">
+				            <h6 class="media-heading text-bold no-margin">
+				            	<a href="?page=trainingcategory" class="text-default">AML Training &amp; Compliance</a>
+				        	</h6>
+				    		<!-- <span class="display-block line-clamp-2">
+				    						            	Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In scelerisque eget felis nec fermentum.
+				    						            </span> -->
+				        </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<div class="mb-20">
+			<div class="row">
+				<div class="col-xs-4 col-sm-12">
+					<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+						<a class="text-white thumb" href="?page=trainingcategory">
+							<div class="thumb-hd-size category-4-gradient-b border-radius-double">
+								<img class="valign-middle-xs" src="graphics/categories/platform-configuration-icon.png" alt="">
+								<!-- <img src="graphics/categories/platform-configuration.jpg" alt=""> -->
+							</div>
+							<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+								<span class="text-left text-white">
+									<div class="px-20 text-left">
+										<h6 class="text-semibold no-margin-top hidden-xs">
+											Platform Configuration Training
+										</h6>
+									</div>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-8 visible-xs-block">
+			        <div class="media-body">
+				        <div class="rows-2-max">
+				            <h6 class="media-heading text-bold no-margin">
+				            	<a href="?page=trainingcategory" class="text-default">Platform Configuration Training</a>
+				        	</h6>
+				    		<!-- <span class="display-block line-clamp-2">
+				    						            	Ut consectetur mi vel sagittis pretium. Pellentesque ligula risus, varius quis lobortis non, volutpat et odio.
+				    						            </span> -->
+				        </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<div class="mb-20">
+			<div class="row">
+				<div class="col-xs-4 col-sm-12">
+					<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+						<a class="text-white thumb" href="?page=trainingcategory">
+							<div class="thumb-hd-size category-5-gradient-b border-radius-double">
+								<img class="valign-middle-xs" src="graphics/categories/operations-icon.png" alt="">
+								<!-- <img src="graphics/categories/operations.jpg" alt=""> -->
+							</div>
+							<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+								<span class="text-left text-white">
+									<div class="px-20 text-left">
+										<h6 class="text-semibold no-margin-top hidden-xs">
+											Operations Training
+										</h6>
+									</div>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-8 visible-xs-block">
+			        <div class="media-body">
+				        <div class="rows-2-max">
+				            <h6 class="media-heading text-bold no-margin">
+				            	<a href="?page=trainingcategory" class="text-default">Operations Training</a>
+				        	</h6>
+				    		<!-- <span class="display-block line-clamp-2">
+				    						            	Aliquam non ipsum mattis, rutrum augue vel, gravida nibh in vel ligula ac neque mattis ullamcorper.
+				    						            </span> -->
+				        </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<div class="mb-20">
+			<div class="row">
+				<div class="col-xs-4 col-sm-12">
+					<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+						<a class="text-white thumb" href="?page=trainingcategory">
+							<div class="thumb-hd-size category-6-gradient-b border-radius-double">
+								<img class="valign-middle-xs" src="graphics/categories/statistics-icon.png" alt="">
+								<!-- <img src="graphics/categories/statistics.jpg" alt=""> -->
+							</div>
+							<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+								<span class="text-left text-white">
+									<div class="px-20 text-left">
+										<h6 class="text-semibold no-margin-top hidden-xs">
+											M-Pesa Commercial &amp; Statistics
+										</h6>
+									</div>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-8 visible-xs-block">
+			        <div class="media-body">
+				        <div class="rows-2-max">
+				            <h6 class="media-heading text-bold no-margin">
+				            	<a href="?page=trainingcategory" class="text-default">M-Pesa Commercial &amp; Statistics</a>
+				        	</h6>
+				    		<!-- <span class="display-block line-clamp-2">
+				    						            	Curabitur metus faucibus nulla purus, at mollis lectus porttitor vel donec euismod arcu nec augue porta tempor.
+				    						            </span> -->
+				        </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<div class="mb-20">
+			<div class="row">
+				<div class="col-xs-4 col-sm-12">
+					<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+						<a class="text-white thumb" href="?page=trainingcategory">
+							<div class="thumb-hd-size category-7-gradient-b border-radius-double">
+								<img class="valign-middle-xs" src="graphics/categories/architecture-icon.png" alt="">
+								<!-- <img src="graphics/categories/architecture.jpg" alt=""> -->
+							</div>
+							<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+								<span class="text-left text-white">
+									<div class="px-20 text-left">
+										<h6 class="text-semibold no-margin-top hidden-xs">
+											Architecture Training
+										</h6>
+									</div>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-8 visible-xs-block">
+			        <div class="media-body">
+				        <div class="rows-2-max">
+				            <h6 class="media-heading text-bold no-margin">
+				            	<a href="?page=trainingcategory" class="text-default">Architecture Training</a>
+				        	</h6>
+				    		<!-- <span class="display-block line-clamp-2">
+				    						            	Nulla mauris sapien, dapibus a gravida ac, vehicula ac lectus sed non mauris et lacus sollicitudin mollis.
+				    						            </span> -->
+				        </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>

@@ -1,0 +1,61 @@
+<style>
+    table#dt_basic .t_head{
+        height: 34px;
+    }
+    .dt-top ~ table#dt_basic .t_head{
+        padding: 0;
+        border:0;
+        height:0;
+    }
+</style>
+<div class="cme-products-list course-promo-grid">
+    <div class="ibox float-e-margins">
+        <div class="ibox-content bordered">
+            <div class="promo-heading margin-top-10 margin-bottom-0">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="clearfix">
+                            <If condition="'{{slogan_icon_show}}' == 'yes'">
+                                <i class="{{slogan_icon}}"></i>
+                            </If>
+                            {{headline}}
+                            <If condition="'{{enable_user_to_show}}' == 'yes'">
+                                {{UserName}}
+                            </If>
+                            <If condition="'{{help_show}}' == 'yes'">
+                                <div class="pull-right has-popover cursor-pointer" title="{{help_title}}" data-toggle="popover" data-placement="bottom" data-container="body" data-viewport="body">
+                                    <a class="btn btn-xs btn-outline btn-brand no-margin"><i class="fa fa-question-circle"></i></a>
+                                    <div class="popover-content-holder">
+                                        {{help_description}}
+                                    </div>
+                                </div>
+                            </If>
+                        </h3>
+                    </div>
+                    <If condition="'{{slogan_description_show}}' == 'yes'">
+                        <div class="promo-description col-xs-12">
+                            {{slogan_description}}
+                        </div>
+                    </If>
+                </div>
+            </div>
+            <Grid gridId="CiGrid">
+                <Header>
+                <div class="well well-md no-margin margin-top-10">
+                </Header>
+                <Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+                <Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID_IN_LIST}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+                <div class="margin-bottom-10 {{enable_edit_class}}" {{enable_edit_attr}}>
+                    <!-- {{CID}}<br>  -->
+                    <Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiContentIncluded.html"/>
+                </div>
+                <Separator>
+                <hr>
+                </Separator>
+                <Footer>
+                </div>
+                </Footer>
+            </Grid>
+        </div>
+    </div>
+</div>

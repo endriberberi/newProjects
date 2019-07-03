@@ -1,0 +1,18 @@
+
+<If condition="'{{cntr_CIFooterToolbox}}'=='yes'">
+</If>	
+	$dtToRtn = baseAuthoring::getAuthoringSimpleFuncionality();
+	if (isset($dtToRtn["CIFooterToolbox"]) && $dtToRtn["CIFooterToolbox"]=="yes") {
+	
+	
+	} else {
+	
+		/*cntr_
+		$dtToRtn["onPageEditing"] 			= $onPageEditing;
+		$dtToRtn["switchUserMode"] 			= $switchUserMode;
+		$dtToRtn["switchEditingMode"] 		= $switchEditingMode;
+		$dtToRtn["toolsMainMeny"] 			= $toolsMainMeny;
+
+		$dtToRtn["approveChangesShortcut"] 		= $approveChangesShortcut;
+		$dtToRtn["activateDeactivateShortcut"]	= $activateDeactivateShortcut;
+		$dtToRtn["CIFooterToolbox"] 			= $CIFooterToolbox;*/

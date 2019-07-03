@@ -1,0 +1,36 @@
+<WebBox ID="MainContainer" Type="HiddenContainer" Case="Always" Editable="False">
+	<div class="bg-ishp-primary navbar navbar-inverse">
+		<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+		<div class="navbar-collapse collapse " id="navbar-mobile">
+			<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+			<Include SRC="{{./}}LanguageArea/LanguageArea.html"/>
+		</div>
+
+		<Include SRC="{{./}}HeaderModulesArea/HeaderModulesArea.html"/>
+	</div>
+		<div class="page-container" >
+			<div class="page-content">
+				<If condition="'{{exist_left}}'=='yes'">
+					<Include SRC="{{./}}LeftTopArea/LeftTopArea.html"/>
+				</If>
+				<div class="content-wrapper">
+					<If condition="'{{level_1}}' != '0'">
+						<Include SRC="{{./}}PageTitleArea/PageTitleArea.html"/>
+					</If>
+					<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+
+					<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/MainContent.html"/>
+					<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+				</div>
+			</div>
+		</div>
+		<div id="footerArea">
+			<div class="container-fluid">
+				<div class="copyright">
+					<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+				</div>
+			</div>
+		</div>
+
+<Include SRC="{{./}}footer_includes.html"/>
+</WebBox>

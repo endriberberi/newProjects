@@ -1,0 +1,432 @@
+<Grid gridId="Grid_form">
+
+	<Header>
+	<div class="panel panel-default" style="padding-bottom: 0px;border:none;">
+	</Header>
+			<If condition="'{{type}}' == 'form_header'">
+				<div class="panel-heading pb-5 pt-5">
+					<h4 class="panel-title">{{label}}</h4>
+					<If condition="'{{data-action}}' == 'collapse'">
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+							</ul>
+						</div>
+					</If>
+				</div>
+			</If>
+
+			<If condition="'{{CurrentRecNr}}' == '1'">
+				<div class="panel-body" style="padding-bottom: 0px;">
+			</If>
+
+			<If condition="'{{type}}' == 'form_open'">
+				<form
+				 class="form-horizontal"
+				 name="{{name}}"
+				 id="{{id}}"
+				 method="{{method}}"
+				 onSubmit="{{onSubmit}}"
+				 {{other_attributes}} >
+			</If>
+				<If condition="'{{type}}' == 'hidden'">
+					<input
+					 type="hidden"
+					 name="{{name}}"
+					 value="{{value}}"
+					 id="{{id}}"
+					 {{other_attributes}} >
+				</If>
+
+				<If condition="'{{type}}' == 'form_body_start'">
+					<div {{other_attributes}}>
+				</If>
+
+					<If condition="'{{type}}' == 'row_start'">
+						<div class="row" {{other_attributes}}>
+					</If>
+
+						<If condition="'{{type}}' == 'col_start'">
+							<div class="col-sm-{{width}}" {{other_attributes}}>
+						</If>
+
+						<If condition="'{{type}}' == 'section_start'">
+								<div class="smart-form" {{other_attributes}}>
+									<section class="row">
+						</If>
+
+						<If condition="'{{type}}' == 'dropzone'">
+							<div class="clsbox-1" runat="server"  >
+								<div class="dropzone app_doc_upload clsbox" id="{{id}}"
+									data-upload-url="{{data_upload_url}}"
+									data-allow="{{data_allow}}"
+									{{other_attributes}}
+								></div>
+							</div>
+
+							<script>
+								modules.push('app_doc_upload');
+							</script>
+						</If>
+
+									<If condition="'{{type}}' == 'label'">
+										<If condition="'{{width}}' != '0'">
+											<div class="col-sm-{{width}}">
+
+											<label
+												 for="{{for}}"
+												 class="label"
+												 id="{{id}}"
+												 {{other_attributes}} >
+										</If>
+
+												<If condition="'{{link}}' == 'Y'">
+													<a {{link_att}}
+
+														<If condition="'{{link_data_modal}}' == 'Y'">
+
+															data-bs-modal="true"
+															data-modal-iframe="{{link_modal_iframe}}"
+															data-modal-size="{{link_modal_size}}"
+															data-modal-style="compact"
+															data-url-custom="true"
+															data-url="{{link_data_url}}"
+															data-title="{{link_data_title}}"
+															data-modal-width="{{link_modal_width}}"
+															data-modal-height="{{link_modal_height}}"
+														</If>
+													>
+												</If>
+
+												<If condition="'{{has_icon}}' == 'Y'">
+													<If condition="'{{icon_type}}' == 'icon_preview'">
+														<i title="{{link_data_title}}" class="icon-square-up-right"></i>
+													</If>
+													<If condition="'{{icon_type}}' == 'icon_preview_img'">
+														<i title="{{link_data_title}}" class="icon-image2"></i>
+													</If>
+													<If condition="'{{icon_type}}' == 'icon_preview_video'">
+														<i title="{{link_data_title}}" class="icon-video-camera2"></i>
+													</If>
+													<If condition="'{{icon_type}}' == 'icon_preview_audio'">
+														<i title="{{link_data_title}}" class="icon-volume-low"></i>
+													</If>
+													<If condition="'{{icon_type}}' == 'icon_preview_pdf'">
+														<i title="{{link_data_title}}" class="icon-file-pdf"></i>
+													</If>
+
+													<If condition="'{{icon_type}}' == 'icon_edit'">
+														<i title="{{link_data_title}}" class="icon-pencil7"></i>
+													</If>
+													<If condition="'{{icon_type}}' == 'icon_add'">
+														<i title="{{link_data_title}}" class="icon-plus2 position-left"></i>
+													</If>
+													<If condition="'{{icon_type}}' == 'icon_download'">
+														<i title="{{link_data_title}}" class="icon-square-down"></i>
+													</If>
+												</If>
+
+												<If condition="'{{link}}' == 'Y'">
+													</a>
+												</If>
+
+												{{value}}
+
+										<If condition="'{{width}}' != '0'">
+											</label>
+											</div>
+										</If>
+									</If>
+
+
+									<If condition="'{{type}}' == 'obj_preview'">
+										<If condition="'{{width}}' != '0'">
+											<div class="col-sm-{{width}}">
+												<label
+													for="{{for}}"
+											 		class="label"
+											 		id="{{id}}"
+											 		{{other_attributes}} >
+										</If>
+
+												<b>{{value}}</b>
+
+										<If condition="'{{width}}' != '0'">
+											 	</label>
+										 	</div>
+										</If>
+									</If>
+
+									<If condition="'{{type}}' == 'text'">
+
+										<If condition="'{{width}}' != '0'">
+											<div class="col-sm-{{width}}">
+										</If>
+											<label class="input">
+
+												<If condition="'{{icon}}' == 'fax'">
+													<i class="icon-prepend icon-phone"></i>
+												</If>
+												<If condition="'{{icon}}' == 'tel'">
+													<i class="icon-prepend  icon-phone2"></i>
+												</If>
+												<If condition="'{{icon}}' == 'mobile'">
+													<i class="icon-prepend  icon-mobile3"></i>
+												</If>
+												<If condition="'{{icon}}' == 'email'">
+													<i class="icon-prepend  icon-envelope"></i>
+												</If>
+
+												<input
+												 type="text"
+												 id="{{id}}"
+												 name="{{name}}"
+												 value="{{value}}"
+												 maxlength="{{maxlength}}"
+												 placeholder="{{placeholder}}"
+												 class="input-sm"
+												 data-rule-required="true"
+												 data-msg-required=""
+												 data-rule-htmlsanity="true"
+												 {{other_attributes}} >
+
+											</label>
+
+										<If condition="'{{width}}' != '0'">
+											</div>
+										</If>
+									</If>
+
+									<If condition="'{{type}}' == 'date'">
+										<If condition="'{{width}}' != '0'">
+											<div class="col-sm-{{width}}">
+										</If>
+
+											<label class="input">
+										    	<i class="icon-prepend icon-calendar22"></i>
+
+										    	<input
+										    	 type="text"
+										    	 id="{{id}}"
+										    	 name="{{name}}"
+										    	 value="{{value}}"
+										    	 maxlength="{{maxlength}}"
+										    	 placeholder="{{placeholder}}"
+										    	 class="input-sm datepicker daterange-basic"
+										    	 {{other_attributes}} >
+											</label>
+
+										<If condition="'{{width}}' != '0'">
+											</div>
+										</If>
+									</If>
+
+									<If condition="'{{type}}' == 'select'">
+										<If condition="'{{width}}' != '0'">
+											<div class="col-sm-{{width}}">
+										</If>
+
+											<label class="select">
+											    <select
+											     id="{{id}}"
+											     name="{{name}}"
+											     data-placeholder="{{placeholder}}"
+											     class="input-sm
+											    	<If condition="'{{filter}}' == 'Y'">
+												 		 kw-list-controller
+													</If>
+											     "
+											     data-rule-required="true"
+											     data-msg-required=""
+											     data-rule-htmlsanity="true"
+											     data-placeholder="{{placeholder}}"
+											     {{other_attributes}} >{{value}}</select>
+											    <i></i>
+											</label>
+
+										<If condition="'{{width}}' != '0'">
+											</div>
+										</If>
+									</If>
+
+									<If condition="'{{type}}' == 'select-multiple'">
+										<div class="col-sm-{{width}}">
+											<label class="select">
+												<select
+												 id="{{id}}"
+												 name="{{name}}"
+												 data-placeholder="{{placeholder}}"
+												 class="input-sm kw-list-controller"
+												 multiple="multiple"
+												 data-selected-options=""
+												 {{other_attributes}} >{{value}}</select>
+										</label>
+										</div>
+									</If>
+
+									<If condition="'{{type}}' == 'textarea'">
+										<div class=" col-sm-{{width}}">
+											<label class="textarea textarea-resizable">
+										    	<textarea
+										    	 id="{{id}}"
+										    	 name="{{name}}"
+										    	 placeholder="{{placeholder}}"
+										    	 class="custom-scroll"
+										    	 data-rule-required=""
+										    	 data-msg-required=""
+										    	 data-rule-htmlsanity=""
+										    	 {{other_attributes}} >{{value}}</textarea>
+											</label>
+										</div>
+									</If>
+
+									<If condition="'{{type}}' == 'radio_start'">
+										<If condition="'{{inline}}' == 'N'">
+											<div class="col-sm-{{width}}">
+										</If>
+										<If condition="'{{inline}}' != 'N'">
+											<div class="inline-group col-sm-{{width}}">
+										</If>
+									</If>
+
+										<If condition="'{{type}}' == 'radio'">
+											<label class="radio">
+												<input
+												 type="radio"
+												 id="{{id}}"
+												 name="{{name}}"
+												 value="{{value}}"
+												 {{other_attributes}} >
+												<i></i>{{label}}
+											</label>
+										</If>
+
+									<If condition="'{{type}}' == 'radio_end'">
+										</div>
+									</If>
+
+						<If condition="'{{type}}' == 'section_end'">
+									</section>
+								</div>
+						</If>
+
+						<If condition="'{{type}}' == 'col_end'">
+							</div>
+						</If>
+
+
+						<If condition="'{{type}}' == 'table_start'">
+							<table border="1" class="table datatable-header table-condensed smart-form table-hover table-bordered table-striped" style="padding: 0px; margin: 0px;" {{other_attributes}}>
+						</If>
+
+							<If condition="'{{type}}' == 'thead_start'">
+								<thead {{other_attributes}}>
+							</If>
+
+							<If condition="'{{type}}' == 'thead_end'">
+								</thead>
+							</If>
+
+							<If condition="'{{type}}' == 'tbody_start'">
+								<tbody {{other_attributes}}>
+							</If>
+
+							<If condition="'{{type}}' == 'tbody_end'">
+								</tbody>
+							</If>
+
+							<If condition="'{{type}}' == 'tr_start'">
+								<tr {{other_attributes}}>
+							</If>
+
+							<If condition="'{{type}}' == 'tr_end'">
+								</tr>
+							</If>
+
+							<If condition="'{{type}}' == 'th_start'">
+								<th {{other_attributes}}>
+							</If>
+
+							<If condition="'{{type}}' == 'th_end'">
+								</th>
+							</If>
+
+							<If condition="'{{type}}' == 'td_start'">
+								<td {{other_attributes}}>
+							</If>
+
+							<If condition="'{{type}}' == 'td_end'">
+								</td>
+							</If>
+
+						<If condition="'{{type}}' == 'table_end'">
+							</table>
+						</If>
+
+					<If condition="'{{type}}' == 'row_end'">
+						</div>
+					</If>
+
+				<If condition="'{{type}}' == 'form_body_end'">
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_footer_start'">
+					<div style="padding-top: 5px; padding-bottom: 10px;" {{other_attributes}}>
+				</If>
+
+							<If condition="'{{type}}' == 'button'">
+								<button
+								 class="btn btn-{{primary}}"
+								 type="{{button_type}}"
+								 name="{{name}}"
+								 id="{{id}}"
+								 {{other_attributes}} >
+
+									<If condition="'{{action_type}}' == 'search'">
+										<i class="icon-search4 position-left"></i>
+									</If>
+
+									<If condition="'{{action_type}}' == 'clear'">
+										<i class="icon-eraser2 position-left"></i>
+									</If>
+
+									<If condition="'{{action_type}}' == 'save'">
+										<i class="icon-plus2 position-left"></i>
+									</If>
+
+									<If condition="'{{action_type}}' == 'back'">
+										<i class="icon-menu7 position-left"></i>
+									</If>
+
+									<If condition="'{{action_type}}' == 'add'">
+										<i class="icon-plus2 position-left"></i>
+									</If>
+
+									<If condition="'{{action_type}}' == 'del'">
+										<i class="icon-minus2 position-left"></i>
+									</If>
+
+									<If condition="'{{action_type}}' == 'select'">
+										<i class="icon-square-down-left position-left"></i>
+									</If>
+
+									{{value}}
+								</button>
+							</If>
+
+				<If condition="'{{type}}' == 'form_footer_end'">
+					</div>
+				</If>
+
+			<If condition="'{{type}}' == 'form_closed'">
+				</form>
+			</If>
+	<Footer>
+			</div>
+		</div>
+		<script>
+			modules.push('kw-list-controller', 'datepicker');
+		</script>
+	</Footer>
+</Grid>

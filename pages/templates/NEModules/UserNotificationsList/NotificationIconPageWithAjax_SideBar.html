@@ -1,0 +1,44 @@
+	<div>
+		<div class="tab-content sidebar-container">
+			<div id="tab-panel-notifications" class="tab-pane active">
+				<Grid gridId="getUserNotificationTot_{{ses_userid}}">
+				<IfEmpty>
+					<div class="sidebar-title">
+						<h3> <i class="fa fa-bell-o"></i> Notifications</h3>
+						<small>No notifications.</small>
+					</div>
+				</IfEmpty>
+					<div class="sidebar-title">
+						<h3> <i class="fa fa-bell-o"></i> Notifications</h3>
+						<small>You have {{new}} new notifications. </small>
+						<!--
+							{{totals}}:numri total
+						-->
+					</div>
+					<div>
+						<ul class="list-group elements-list">
+							<Grid gridId="getUserNotification_{{ses_userid}}">
+								<li class="list-group-item has-popover cursor-pointer" data-id="{{id_alert}}" data-placement="left" data-viewport="body" data-toggle="popover" data-trigger="click" data-container="body">
+									<a href="javascript:void(0);">
+										<strong class="block elipsis">{{subjekti}}</strong>
+										<span class="text-muted"> {{record_timestamp}}</span>
+									</a>
+									<div class="popover-content-holder">
+										<h4>{{subjekti}}</h4>
+										<small class="text-muted"> {{record_timestamp}}</small>
+										<hr class="simple">
+										{{full_content}}
+										<If condition="'{{enable_action_link}}'=='y'">
+											<a href="javascript:void(0);" class="btn btn-xs btn-brand btn-outline">Action link</a>
+										</If>
+									</div>
+								</li>
+							</Grid>
+						</ul>
+					</div>
+				  </Grid>
+			</div>
+
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,163 @@
+<Grid gridId="Grid_details">
+
+	<Header>
+			<div id="contact-address-block" class="address-block">
+	</Header>
+				<If condition="'{{type}}' == 'form_header'">
+					<div class="panel-heading pb-5 pt-5">
+						<h4 class="panel-title">{{label}}</h4>
+						<If condition="'{{data-action}}' == 'collapse'">
+							<div class="heading-elements">
+								<ul class="icons-list">
+									<li><a data-action="collapse"></a></li>
+								</ul>
+							</div>
+						</If>
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_body_start'">
+					<div id="contact-address-block" class="address-block">
+				</If>
+
+				<If condition="'{{type}}' == 'form_open'">
+					<form class="form-horizontal" name="{{name}}" id="{{id}}" method="{{method}}" onSubmit="{{onSubmit}}" style="{{style_extra}}" {{other_attributes}}>
+				</If>
+
+				<If condition="'{{type}}' == 'hidden'">
+					<input type="hidden" name="{{name}}" value="{{value}}">
+				</If>
+
+				<If condition="'{{type}}' == 'row_start'">
+					<div class="row">
+				</If>
+
+					<If condition="'{{type}}' == 'text'">
+						<div class="col-sm-{{width_both}}">
+							<div class="smart-form">
+								<section>
+									<label for="{{id}}" class="label">{{label}}:</label>
+									<label class="input">
+									    <input type="text" id="{{id}}"     name="{{name}}"   value="{{value}}"         class="form-control" data-rule-required="true" data-msg-required="{{enter_first_name}}" data-rule-htmlsanity="true" maxlength="{{maxlength}}" style="{{style_extra}}" placeholder="{{placeholder}}" {{other_attributes}}>
+									</label>
+								</section>
+							</div>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'date'">
+						<div class="col-sm-{{width_both}}">
+							<div class="smart-form">
+								<section>
+									<label for="{{id}}" class="label">{{label}}:</label>
+									<label class="input">
+									    <i class="icon-prepend icon-calendar22"></i>
+									    <input type="text" id="{{id}}"     name="{{name}}"   value="{{value}}"         class="form-control datepicker daterange-basic"  maxlength="{{maxlength}}" style="{{style_extra}}" placeholder="{{placeholder}}" {{other_attributes}}>
+									</label>
+								</section>
+							</div>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'select'">
+						<div class="col-sm-{{width_both}}">
+							<div class="smart-form">
+								<section>
+									<label for="{{id}}" class="label">{{label}}:</label>
+									<label class="select">
+									    <select id="{{id}}" name="{{name}}"   class="form-control" data-rule-required="true" data-msg-required="{{enter_first_name}}" data-rule-htmlsanity="true" style="{{style_extra}}" placeholder="{{placeholder}}" {{other_attributes}}>{{value}}</select>
+									    <i></i>
+									</label>
+								</section>
+							</div>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'radio_start'">
+						<div class="col-sm-{{width_both}}">
+							<div class="smart-form">
+								<section>
+									<label class="display-block label">{{label}}:</label>
+									<div class="inline-group">
+					</If>
+
+									<If condition="'{{type}}' == 'radio'">
+										<label class="radio">
+											<input type="radio" value="{{value}}" name="{{name}}">
+											<i></i>{{label}}
+										</label>
+									</If>
+
+					<If condition="'{{type}}' == 'radio_end'">
+									</div>
+								</section>
+							</div>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'label'">
+						<div class="col-sm-{{width_both}}">
+							<div class="smart-form">
+								<section>
+									<label class="label">{{label}}:</label>
+									<label class="label">{{value}}</label>
+								</section>
+							</div>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'new_live'">
+						<div class="col-sm-12">
+							<div class="smart-form">
+								<section>
+									<label class="label">{{label}}</label>
+								</section>
+							</div>
+						</div>
+					</If>
+
+				<If condition="'{{type}}' == 'row_end'">
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_footer_start'">
+					<div class="text-left">
+				</If>
+
+					<If condition="'{{type}}' == 'button'">
+						<button class="btn btn-{{primary}}" type="{{button_type}}" name="{{name}}" id="{{id}}" {{other_attributes}}>
+							<If condition="'{{action_type}}' == 'save'">
+								<i class="icon-plus2 position-left"></i>
+							</If>
+
+							<If condition="'{{action_type}}' == 'back'">
+								<i class="icon-menu7 position-left"></i>
+							</If>
+
+							<If condition="'{{action_type}}' == 'add'">
+								<i class="icon-plus2 position-left"></i>
+							</If>
+
+							<If condition="'{{action_type}}' == 'del'">
+								<i class="icon-make-group position-left"></i>
+							</If>
+
+							{{value}}
+						</button>
+					</If>
+
+				<If condition="'{{type}}' == 'form_footer_end'">
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_closed'">
+					</form>
+				</If>
+
+				<If condition="'{{type}}' == 'form_body_end'">
+					</div>
+				</If>
+	<Footer>
+		</div>
+	</Footer>
+</Grid>

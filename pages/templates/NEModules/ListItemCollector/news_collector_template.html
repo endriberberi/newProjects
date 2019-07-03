@@ -1,0 +1,109 @@
+<div class="content-wrapper">
+	<Include SRC="{{./}}default_header_property_template.html"/>
+	<Include SRC="{{./}}partials/header_pagination.html"/>
+	<Include SRC="{{./}}partials/simpleFilterFrom.html"/>
+
+	<Grid gridId="firstGroupingGrid">
+		<IfEmpty>
+			<Grid gridId="gridDataSrc">
+				<IfEmpty>
+        			<p class="text-muted text-size-small">No news found</p>
+					<!-- <--Include SRC="{{./}}list_empty_message_template.html"/> -->
+				</IfEmpty>
+				<Header>
+					<!-- include filter here -->
+				<ul class="media-list search-results-list content-group">
+		            <li class="media">
+		                <div class="media-body">
+		                    <div class="row">
+
+				</Header>
+								<div class="col-md-6">
+	                            	<div class="media content-group mb-0">
+											<Include SRC="{{./}}news-box_wraper.html"/>
+									</div>
+								</div>
+									<Separator>
+									<If condition="{{CurrentRecNr}}%2 == '0'">
+									<div class="col-md-12">
+                       				<hr class="hidden-sm hidden-xs mt-0">
+                       				</div>
+                       				</If>
+                    				<hr class="hidden-md hidden-lg mt-0">
+									</Separator>
+				<Footer>
+							</div>
+						</div>
+					</li>
+				</ul>
+				</Footer>
+			</Grid>
+		</IfEmpty>
+			<If condition="'{{existSubGroup}}'=='no'">
+				<h2 class="list-group-header">{{labelGroup}}</h2>
+				<Grid gridId="firstLevelGrid_CIINSIDE_key_{{keyGroup}}">
+				<Header>
+				<ul class="media-list search-results-list content-group">
+		            <li class="media">
+		                <div class="media-body">
+		                    <div class="row">
+
+				</Header>
+								<div class="col-md-6">
+                            		<div class="media content-group mb-0">
+										<Include SRC="{{./}}news-box_wraper.html"/>
+									</div>
+								</div>
+									<Separator>
+										<If condition="{{CurrentRecNr}}%2 == '0'">
+										<div class="col-md-12">
+				           				<hr class="hidden-sm hidden-xs mt-0">
+				           				</div>
+				           				</If>
+			        				<hr class="hidden-md hidden-lg mt-0">
+									</Separator>
+				<Footer>
+							</div>
+						</div>
+					</li>
+				</ul>
+				</Footer>
+				</Grid>
+			</If>
+			<If condition="'{{existSubGroup}}'=='yes'">
+				<Grid gridId="secondLevelGrid_{{keyGroup}}">
+					<h2 class="list-group-header">{{labelSubGroupFull}}</h2>
+					<Grid gridId="{{keySubGroup}}">
+					<Header>
+			
+					<ul class="media-list search-results-list content-group">
+			            <li class="media">
+			                <div class="media-body">
+			                    <div class="row">
+					</Header>
+									<div class="col-md-6">
+		                            	<div class="media content-group mb-0">
+											<Include SRC="{{./}}news-box_wraper.html"/>
+										</div>
+									</div>
+									<Separator>
+										<If condition="{{CurrentRecNr}}%2 == '0'">
+										<div class="col-md-12">
+				           				<hr class="hidden-sm hidden-xs mt-0">
+				           				</div>
+				           				</If>
+			        				<hr class="hidden-md hidden-lg mt-0">
+									</Separator>
+					<Footer>
+								</div>
+							</div>
+						</li>
+					</ul>
+					</Footer>
+				</Grid>
+				</Grid>
+			</If>
+	</Grid>
+	<Include SRC="{{./}}partials/list_footer.html"/>
+	<Include SRC="{{./}}partials/footer_pagination.html"/>
+</div>

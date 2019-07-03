@@ -1,0 +1,62 @@
+<WebBox ID="guessByAjax" MODE="Dynamic">
+<Grid gridId="gridToLabelsSearchModule">
+	<div class="search-suggest text-left search-close border-radius">
+		<div class="page-container search-suggest-wrapper p-20">
+
+			<div class="search-suggest-header">
+				<div class="pull-right">
+					<a href="#" class="search-close"><i class="icon-close2"></i> Close</a>
+				</div>
+				<p class="text-muted text-size-small">Quick results***</p>
+				<hr>
+			</div>
+			<div class="search-suggest-body">
+				<Grid gridId="searchTab">
+				<Grid gridId="gridResults_{{indexTab}}">
+				<Header>
+					<h5 class="text-semibold">{{tab_description}}</h5>
+					<ul class="media-list search-results-list content-group">
+				</Header>
+
+						<li class="media">
+						<If condition="'{{display_image}}' =='yes' && '{{dp_image}}'=='yes'">
+							<If condition="'{{makelink_image}}' =='yes'">
+								<a href="{{hrefToDoc}}" class="media-left"><img src="{{srcImageToDisplay}}" class="img-responsive img-rounded media-preview" alt="" style="width: 120px; height: auto;"></a>
+							</If>
+							<If condition="'{{makelink_image}}' !='yes'">
+								<img src="{{srcImageToDisplay}}" class="img-responsive img-rounded media-preview" alt="" style="width: 120px; height: auto;">
+							</If>
+						</If>
+							<div class="media-body">
+								<h6 class="media-heading"><a href="{{hrefToDoc}}" title="{{titleToAlt}}" target="{{hrefToDocTarget}}">{{titleToDisplay}}</a></h6>
+								<If condition="'{{dp_docAttached}}' =='yes'">
+								<ul class="list-inline list-inline-separate text-muted">
+									<li><i class="icon-book-play position-left"></i> Video tutorials</li>
+								</ul>
+								</If>
+								<If condition="'{{dp_abst}}' =='yes'">
+									{{abstractToDisplay}}
+								</If>
+							</div>
+						</li>
+				<Footer>
+					</ul>
+				</Footer>
+				</Grid>
+				</Grid>
+
+			<!-- </div> -->
+
+			<If condition="'{{dp_SearchTargetPage}}' =='yes'">
+			<div class="search-suggest-footer">
+				<hr>
+				<a href="{{searchTargetPageHref}}">{{searchTargetPageLabel}} <i class="icon-arrow-right14"></i></a>
+			</div>
+		</div>
+	</div>
+	</div>
+</Grid>
+
+
+</WebBox>
+

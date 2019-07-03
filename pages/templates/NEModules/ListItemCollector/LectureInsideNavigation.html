@@ -1,0 +1,20 @@
+<Grid gridId="gridDataSrc">
+<Header>
+<div class="navbar navbar-default navbar-xs hidden-xs">
+<ul class="nav navbar-nav no-border visible-xs-block">
+	<li><a class="text-center collapsed" data-target="#navbar-alt" data-toggle="collapse"><i class="icon-circle-down2"></i></a></li>
+</ul>
+<div class="navbar-collapse collapse" id="navbar-alt">
+<ul class="nav navbar-nav">
+</Header>
+
+			<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+			<Var name="isActiv">('{{CID}}' == '{{contentId}}' ? 'active' : '')</Var>
+			<li class="{{isActiv}}"><a href="{{hrefToDocOther}}">{{titleToDisplay}}</a></li>
+
+	<Footer>
+</ul>
+</div>
+</Footer>
+</Grid>

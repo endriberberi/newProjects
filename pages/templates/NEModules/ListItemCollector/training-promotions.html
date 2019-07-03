@@ -1,0 +1,85 @@
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+
+	</IfEmpty>
+	<Header>
+		<div class="row mt-10">
+	</Header>
+
+			<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+
+			<div class="col-md-3 col-sm-4">
+				<div class="mb-20 {{enable_edit_class}}" {{enable_edit_attr}}>
+					<div class="row">
+
+
+
+						<If condition="'{{DC_thumbnail_display}}' == 'yes'">
+							<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+							<IfEmpty>
+							<div class="col-xs-4 col-sm-12">
+								<h6 class="text-semibold no-margin-top hidden-xs">
+									{{titleToDisplay}}
+								</h6>
+							</div>
+							</IfEmpty>
+							<div class="col-xs-4 col-sm-12">
+								<div class="thumbnail no-border border-radius-double hover-static no-margin no-padding">
+
+									<a class="text-white thumb" href="{{hrefToDocOther}}">
+										<div class="thumb-hd-size {{nodeClass}}-gradient-b border-radius-double">
+												<img class="card-img-top img-fluid" src="{{link_url}}" alt=""/>
+										</div>
+										<div class="caption-overflow caption-bottom" style="background-color:transparent;">
+											<span class="text-left text-white">
+												<div class="px-20 text-left">
+													<h6 class="text-semibold no-margin-top hidden-xs">
+														{{titleToDisplay}}
+													</h6>
+												</div>
+											</span>
+										</div>
+									</a>
+
+								</div>
+							</div>
+							</Grid>
+						</If>
+
+						<If condition="'{{DC_thumbnail_display}}' != 'yes'">
+							<div class="col-xs-4 col-sm-12">
+								<h6 class="text-semibold no-margin-top hidden-xs">
+									{{titleToDisplay}}
+								</h6>
+							</div>
+						</If>
+
+						<div class="col-xs-8 visible-xs-block">
+							<div class="media-body">
+								<div class="rows-2-max">
+									<h6 class="media-heading text-bold no-margin">
+									<If condition="'{{linkToTitle}}' == 'yes'">
+									<a  title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}"  class="text-default">
+										{{titleToDisplay}}
+									</a>
+									</If>
+									<If condition="'{{linkToTitle}}' != 'yes'">
+									{{titleToDisplay}}
+									</If>
+									</h6>
+									<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+									<span class="display-block line-clamp-2">{{abstractToDisplay}}</span>
+									</If>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+	<Footer>
+		</div>
+	</Footer>
+</Grid>

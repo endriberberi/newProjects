@@ -1,0 +1,299 @@
+	<div class="search-suggest text-left search-close border-radius">
+		<div class="page-container search-suggest-wrapper p-20">
+			<div class="search-suggest-header">
+				<divv class="pull-right">
+					<a href="#" class="search-close"><i class="icon-close2"></i> Close</a>
+				</divv>
+				<p class="text-muted text-size-small">Quick results</p>
+				<hr>
+			</div>
+			<div class="search-suggest-body">
+				<h5 class="text-semibold">Trainings</h5>
+				<ul class="media-list search-results-list content-group">
+					<li class="media">
+						<a href="?page=trainingdetails&palete=default" class="media-left"><img src="graphics/demo/flat/9.png" class="img-responsive img-rounded media-preview" alt=""></a>
+						<div class="media-body">
+							<h6 class="media-heading"><a href="?page=trainingdetails&palete=default">Conveying or northward</a></h6>
+							<ul class="list-inline list-inline-separate text-muted">
+								<li><i class="icon-book-play position-left"></i> Video tutorials</li>
+							</ul>
+							Conveying or northward offending admitting perfectly my. Interested especially do impression...
+						</div>
+					</li>
+					<li class="media">
+						<a href="?page=trainingdetails&palete=default" class="media-left"><img src="graphics/demo/flat/15.png" class="img-responsive img-rounded media-preview" alt=""></a>
+						<div class="media-body">
+							<h6 class="media-heading"><a href="?page=trainingdetails&palete=default">Up unpacked friendly</a></h6>
+							<ul class="list-inline list-inline-separate text-muted">
+								<li><i class="icon-book-play position-left"></i> Video tutorials</li>
+							</ul>
+							Four need spot ye said we find mile. Are commanded him convinced dashwoods did estimable...
+						</div>
+					</li>
+					<li class="media">
+						<a href="?page=trainingdetails&palete=default" class="media-left"><img src="graphics/demo/flat/17.png" class="img-responsive img-rounded media-preview" alt=""></a>
+						<div class="media-body">
+							<h6 class="media-heading"><a href="?page=trainingdetails&palete=default">Ample end might</a></h6>
+							<ul class="list-inline list-inline-separate text-muted">
+								<li><i class="icon-book-play position-left"></i> Video tutorials</li>
+							</ul>
+							Drawings led greatest add subjects endeavor gay remember. Principles one yet assistance...
+						</div>
+					</li>
+				</ul>
+				<h5 class="text-semibold">News</h5>
+				<ul class="media-list search-results-list content-group">
+					<li class="media">
+						<div class="media-body">
+							<h6 class="media-heading"><a href="#">Replied exposed <strong>savings he</strong> no viewing as up. Soon body add him hill</a></h6>
+							Or kind rest bred with am shed then. In raptures building an bringing be. Elderly is detract tedious assured private so to visited. Do travelling companions contrasted it. Mistress strongly remember up to. Ham him compass you proceed calling detract. Better of always...
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-body">
+							<h6 class="media-heading"><a href="#">Behind sooner <strong>dining so window</strong> excuse he summer Breakfast met certainty</a></h6>
+							Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given. Saw yet kindness too replying whatever marianne. Old sentiments resolution admiration its ...
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-body">
+							<h6 class="media-heading"><a href="#">Society excited by <strong>cottage</strong> private an it esteems</a></h6>
+							By impossible of in difficulty discovered celebrated ye. Justice joy manners boy met resolve produce. Bed head loud next plan rent had easy add him. As earnestly shameless elsewhere defective estimable fulfilled of. Esteem my advice it an excuse enable...
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="search-suggest-footer">
+				<hr>
+				<a href="?page=searchresults&palete=default">View all results <i class="icon-arrow-right14"></i></a>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		modules.push('scrollto');
+		modules.push('enable-popover');
+	</script>
+	<Grid gridId="gridToLabelsSearchResult">
+	<div id="SearchResult" class="" data-scroll-to="true">
+		<!-- kam hequr klasen "content-wrapper" -->
+		 <!-- Search field -->
+		<div class="panel panel-flat">
+	        <div class="panel-heading">
+		    	<div class="content-group">
+			        <If condition="'{{help_show}}' == 'yes'">
+						<div class="pull-right content-group">
+							<a href="javascript:void(0);" class="button-icon jarviswidget-edit-btn has-popover" title="{{help_title}}"
+							data-placement="bottom" data-viewport="body" data-container="body">
+							<i class="fa fa-question-circle help-icon"></i>
+							<div class="popover-content-holder" style="display: none;">
+								{{help_description}}
+							</div>
+							</a>
+						</div>
+					</If>
+		            <h5 class="panel-title">{{slogan_title}}</h5>
+				</div>
+				<If condition="'{{slogan_description_show}}' == 'yes'">
+					<div>
+						<p>{{slogan_description}}</p>
+					</div>
+				</If>
+	        </div>
+		<If condition="'{{displayFilter}}'=='yes'">
+			<div class="panel-body">
+				<If condition="'{{global_cache_dynamic}}'!='Y'">
+					<form class="main-search" name="SearchResultModule"
+							id="SearchResultModule"
+							action=""
+							method="post"
+							onsubmit="filterSRM('{{k}}','{{kc}}','{{rp}}','{{msvSrc}}','{{objId}}','{{s_id}}');return false;">
+
+
+		                <div class="input-group content-group">
+		                    <div class="has-feedback has-feedback-left">
+		                        <input type="text" name="search" id="filterterm" class="form-control input-xlg" value="{{termSearch}}" placeholder="{{_srcLbl_placehoder}}">
+		                        <!-- <input type="text" name="search" id="filterterm" class="tx-indexedsearch-searchbox-sword sword" value="{{termSearch}}" placeholder="{{_srcLbl_placehoder}}" /> -->
+		                        <div class="form-control-feedback">
+		                            <i class="icon-search4 text-muted text-size-base"></i>
+		                        </div>
+		                    </div>
+
+		                    <div class="input-group-btn">
+		                        <button type="submit" class="btn btn-primary btn-xlg">{{_srcLbl_buton}}</button>
+		                    </div>
+		                </div>
+		            </form>
+		        </If>
+		        <If condition="'{{global_cache_dynamic}}'=='Y'">
+					<form class="main-search" name="SearchResultModule"
+						id="SearchResultModule"
+						action="{{hrefSearchResultNext}}"
+						method="post"
+						onsubmit="filterSRM('{{k}}','{{kc}}','{{rp}}','{{msvSrc}}','{{objId}}','{{s_id}}');return false;">
+
+
+		                <div class="input-group content-group">
+		                    <div class="has-feedback has-feedback-left">
+		                        <input type="text" class="form-control input-xlg" name="search" id="filterterm" value="{{termSearch}}" placeholder="{{_srcLbl_placehoder}}">
+		                        <div class="form-control-feedback">
+		                            <i class="icon-search4 text-muted text-size-base"></i>
+		                        </div>
+		                    </div>
+
+		                    <div class="input-group-btn">
+		                        <button type="submit" class="btn btn-primary btn-xlg">{{_srcLbl_buton}}</button>
+		                    </div>
+		                </div>
+		            </form>
+		        </If>
+			</div>
+	    </If>
+		</div>
+		 <!-- /search field -->
+		<!-- Tabs -->
+
+	    <!-- /tabs -->
+	    	<!-- Pagination -->
+								<If condition="'{{show_header_pagination}}'=='yes'">
+									<Include SRC="{{./}}partials/pagination.html"/>
+								</If>
+			<!--</Pagination> -->
+	    <!-- Search results -->
+						<Grid gridId="gridDataSrc">
+							<IfEmpty>
+								<If condition="'{{show_empty_message}}'=='yes' && '{{error_code}}'!='3'">
+									{{empty_message}}
+								</If>
+							</IfEmpty>
+							<Header>
+
+
+
+								<Grid gridId="searchTab">
+
+										<Header>
+											    <ul class="nav nav-lg nav-tabs nav-tabs-bottom search-results-tabs">
+											    	<strong>{{_narrow_results}}:</strong>
+										</Header>
+
+										<Var name="active_class">('{{tab_current}}' != ''  ? 'active' : '')</Var>
+
+											<If condition="'{{termSearch}}' !='' ">
+												<li class="{{active_class}}">
+												<a class="{{tab_current}}" href="{{tab_link_server}}">
+												{{tab_description}}
+												</a>
+												</li>
+											</If>
+											<If condition="'{{termSearch}}'==''">
+												<a href="javascript:void(0);" >{{tab_description}}</a>
+											</If>
+
+										<Footer>
+										</ul>
+										</Footer>
+
+								<!--         <li class="active"><a href="#">All results</a></li>
+								        <li><a href="#"><i class="icon-display4 position-left"></i> Trainings</a></li>
+								        <li><a href="#"><i class="icon-newspaper position-left"></i> News</a></li>
+								        <li><a href="#"><i class="icon-image2 position-left"></i> Files</a></li>
+								    </ul> -->
+									</Grid>
+
+
+								<div class="row">
+	       						<div class="col-lg-12">
+	         					   <div class="panel panel-body">
+									<If condition="'{{show_current_search_term}}'=='yes'">
+									<p class="text-muted text-size-small">
+										{{show_current_search_term_label}}
+									</p>
+									</If>
+									<If condition="'{{show_header_info}}'=='yes'">
+									<p class="text-muted text-size-small">
+										{{show_header_info_label}}
+									</p>
+									</If>
+									<hr>
+							</Header>
+									<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+									<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+									<!-- <div class="website-search-results {{handle_editing_class}}" {{handle_editing_attr}}> -->
+										<div class="media stack-media-on-mobile content-group {{handle_editing_class}}" {{handle_editing_attr}}>
+											<!-- img -->
+
+
+
+										<If condition="'{{display_image}}' =='yes' && '{{dp_image}}'=='yes'">
+											<If condition="'{{makelink_image}}' =='yes'">
+												<a href="{{hrefToDoc}}" class="media-left"><img src="{{srcImageToDisplay}}" class="img-responsive img-rounded media-preview" alt=""></a>
+											</If>
+											<If condition="'{{makelink_image}}' !='yes'">
+												<img src="{{srcImageToDisplay}}" class="img-responsive img-rounded media-preview" alt="">
+											</If>
+										</If>
+											<!-- img -->
+											<div class="media-body">
+												<h6 class="media-heading"><a href="{{hrefToDoc}}" title="{{titleToAlt}}" target="{{hrefToDocTarget}}">{{titleToDisplay}}</a>
+											<If condition="'{{percentage_scoring}}' !='' && '{{display_percentage_score}}'=='yes'">
+												<span class="tx-indexedsearch-percent percent percent-tmpl-css">{{percentage_scoring}}%</span>
+											</If>
+												</h6>
+										<!-- 		<ul class="list-inline list-inline-separate text-muted">
+								                    <li><i class="icon-book-play position-left"></i> Video tutorials</li>
+								                    <li>4 hours ago</li>
+								                </ul> -->
+											<!-- </div> -->
+										<If condition="'{{dp_abst}}' == 'yes'">
+											<div class="tx-indexedsearch-descr descr">
+												{{abstractToDisplay_highlight}}
+											</div>
+										</If>
+										<If condition="'{{display_partFromFullTextSearch}}' == 'yes' && '{{partOfFullText_exist}}' == 'yes'">
+											<div class="tx-indexedsearch-descr descr">
+												{{partOfFullText_highlight}}
+											</div>
+										</If>
+									</div>
+
+							<Footer>
+								</div>
+								</div>
+							</div>
+								</div>
+
+
+
+								<!-- Pagination -->
+								<If condition="'{{show_footer_pagination}}'=='yes'">
+									<Include SRC="{{./}}partials/pagination.html"/>
+								</If>
+	<!-- 						</Pagination> -->
+
+			</Footer>
+
+	    </Grid>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- /search results -->
+	</div>
+
+
+	</Grid>
+	<style>
+		.close.popover-close-btn{
+			padding: 10px;
+		}
+
+		h3.popover-title{
+			border-bottom: 1px solid #ddd;
+		}
+		i.help-icon {
+			font-size: 18px;
+			padding-top: 10px;
+		}
+</style>

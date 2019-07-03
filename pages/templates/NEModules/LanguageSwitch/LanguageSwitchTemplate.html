@@ -1,0 +1,22 @@
+<If condition="('{{link_show_I}}' == '1') || ('{{link_show_II}}' == '1') || ('{{link_show_III}}' == '1')">
+<div class="languageAreaBlock">
+	<ul class="list-inline float-right languageArea">
+		<If condition="'{{link_show_I}}' == '1'">
+				<li>
+					{{link_lng_I}}<i class="fa fa-globe" aria-hidden="true"></i>&nbsp;{{mesg_lng_I}}{{link_lng_I_c}}
+				</li>
+		</If>
+		<If condition="'{{link_show_II}}' == '1'">
+			<li>
+				{{link_lng_II}}<i class="fa fa-globe" aria-hidden="true"></i>&nbsp;{{mesg_lng_II}}{{link_lng_II_c}}
+			</li>
+		</If>
+		<If condition="'{{link_show_III}}' == '1'">
+			<li>
+				{{link_lng_III}}<i class="fa fa-globe" aria-hidden="true"></i>&nbsp;{{mesg_lng_III}}{{link_lng_III_c}}
+			</li>
+		</If>
+	</ul>
+</div>
+</If>
+

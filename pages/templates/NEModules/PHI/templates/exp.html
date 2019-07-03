@@ -1,0 +1,34 @@
+<Grid gridId="Grid_tab_exp">
+	<Header>
+		<div>
+	</Header>
+
+        <a title="{{title}}" class="btn btn-xs bg-teal-400" onClick='{{exp_url}}'>
+
+        	<If condition="'{{exp_type}}' == 'xlsx'">
+        		<i class="icon-file-spreadsheet position-left"></i>
+        	</If>
+
+        	<If condition="'{{exp_type}}' == 'cvs'">
+        		<i class="icon-file-spreadsheet position-left"></i>
+        	</If>
+
+        	<If condition="'{{exp_type}}' == 'html'">
+        		<i class="icon-file-spreadsheet position-left"></i>
+        	</If>
+
+        	<If condition="'{{exp_type}}' == 'pdf'">
+        		<i class="icon-file-spreadsheet position-left"></i>
+        	</If>
+
+        	<If condition="'{{exp_type}}' == 'doc'">
+        		<i class="icon-file-spreadsheet position-left"></i>
+        	</If>
+
+        	{{label}}
+        </a>
+
+	<Footer>
+		</div>
+	</Footer>
+</Grid>

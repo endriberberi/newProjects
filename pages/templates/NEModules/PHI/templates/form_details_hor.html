@@ -1,0 +1,109 @@
+<Grid gridId="Grid_details">
+
+	<Header>
+		<div>
+			<div class="panel panel-flat border-top-primary mb-5">
+	</Header>
+				<If condition="'{{type}}' == 'form_header'">
+					<div class="panel-heading pb-5 pt-5">
+						<h4 class="panel-title">{{label}}</h4>
+						<If condition="'{{data-action}}' == 'collapse'">
+							<div class="heading-elements">
+								<ul class="icons-list">
+									<li><a data-action="collapse"></a></li>
+								</ul>
+							</div>
+						</If>
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_body_start'">
+					<div class="panel-body pb-5">
+				</If>
+
+				<If condition="'{{type}}' == 'form_open'">
+					<form class="form-horizontal" name="{{name}}" id="{{id}}" method="{{method}}" onSubmit="{{onSubmit}}" style="{{style_extra}}" {{other_attributes}}>
+				</If>
+
+				<If condition="'{{type}}' == 'hidden'">
+					<input type="hidden" name="{{name}}" value="{{value}}">
+				</If>
+
+				<If condition="'{{type}}' == 'row_start'">
+					<div class="form-group mb-5">
+				</If>
+
+					<If condition="'{{type}}' == 'text'">
+						<label class="control-label col-lg-{{width_label}}">{{label}}:</label>
+						<div class="col-lg-{{width_object}}">
+						    <input type="text" class="form-control input-xs" name="{{name}}" id="{{id}}" value="{{value}}"  maxlength="{{maxlength}}" style="{{style_extra}}" placeholder="{{placeholder}}" {{other_attributes}}>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'date'">
+						<label class="control-label col-lg-{{width_label}}">{{label}}:</label>
+						<div class="col-lg-{{width_object}}">
+						    <input type="text" class="form-control input-xs" name="{{name}}" id="{{id}}" value="{{value}}"  maxlength="{{maxlength}}" style="{{style_extra}}" placeholder="{{placeholder}}" {{other_attributes}}>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'select'">
+						<label class="control-label col-lg-{{width_label}}">{{label}}:</label>
+						<div class="col-lg-{{width_object}}">
+						    <select class="form-control input-xs" name="{{name}}" id="{{id}}" style="{{style_extra}}" placeholder="{{placeholder}}" {{other_attributes}}>{{value}}</select>
+						</div>
+					</If>
+
+					<If condition="'{{type}}' == 'label'">
+						<label class="control-label col-lg-{{width_label}}">{{label}}:</label>
+						<div class="col-lg-{{width_object}}">
+						    {{value}}
+						</div>
+					</If>
+
+				<If condition="'{{type}}' == 'row_end'">
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_footer_start'">
+					<div class="text-left">
+				</If>
+
+					<If condition="'{{type}}' == 'button'">
+						<button class="btn btn-{{primary}}" type="{{button_type}}" name="{{name}}" id="{{id}}" {{other_attributes}}>
+							<If condition="'{{action_type}}' == 'save'">
+								<i class="icon-plus2 position-left"></i>
+							</If>
+
+							<If condition="'{{action_type}}' == 'back'">
+								<i class="icon-menu7 position-left"></i>
+							</If>
+
+							<If condition="'{{action_type}}' == 'add'">
+								<i class="icon-plus2 position-left"></i>
+							</If>
+
+							<If condition="'{{action_type}}' == 'del'">
+								<i class="icon-make-group position-left"></i>
+							</If>
+
+							{{value}}
+						</button>
+					</If>
+
+				<If condition="'{{type}}' == 'form_footer_end'">
+					</div>
+				</If>
+
+				<If condition="'{{type}}' == 'form_closed'">
+					</form>
+				</If>
+
+				<If condition="'{{type}}' == 'form_body_end'">
+					</div>
+				</If>
+	<Footer>
+			</div>
+		</div>
+	</Footer>
+</Grid>

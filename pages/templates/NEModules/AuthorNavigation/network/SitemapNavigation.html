@@ -1,0 +1,61 @@
+<div class="sitemapNav">
+<If condition="'{{slogan_icon_show}}' == 'yes' || '{{slogan_description_show}}' == 'yes' || '{{slogan_title_exists}}' == 'yes' || '{{headline}}' != '' || '{{help_show}}' == 'yes'">
+	<div class="block-header-prop">
+		<h4 class="">
+			<If condition="'{{slogan_icon_show}}' == 'yes'">
+				<i class="{{slogan_icon}}"></i>
+			</If>
+			<If condition="'{{slogan_title}}' == 'slogan_title'">
+				{{headline}}
+			</If>
+			<If condition="'{{slogan_title}}' != 'slogan_title'">
+				{{slogan_title}}
+			</If>
+			
+			<If condition="'{{help_show}}' == 'yes'">
+			<small>
+				<div class="float-right">
+					<a href="javascript:void(0);" class="button-icon jarviswidget-edit-btn has-popover" title="{{help_title}}"
+					data-placement="bottom" data-viewport="body" data-container="body">
+					<i class="fa fa-question-circle "></i>
+					<div class="popover-content-holder">
+						{{help_description}}
+					</div>
+					</a>
+				</div>  
+			</small>		
+			</If>
+		</h4>
+
+		<If condition="'{{slogan_description_show}}' == 'yes'">
+			<div class="mb-3">{{slogan_description}}</div>
+		</If>
+	</div>
+</If>
+	<Grid gridId="Grid_AuthorNav_{{objNem}}">
+	<Header>
+		
+	<table class="sitemap">
+		<tbody>
+			<tr>
+	</Header>
+	
+				<td>
+					<a href="{{link}}" title="{{label}}">
+						{{label}}
+					</a>
+				</td>
+				
+				<If condition=" '{{CurrentRecNr}}'%2 == '0' ">
+				</tr>
+				<tr>
+				</If>
+	
+	
+	<Footer>
+			</tr>
+		</tbody>
+	</table>
+	</Footer>
+	</Grid>
+</div>

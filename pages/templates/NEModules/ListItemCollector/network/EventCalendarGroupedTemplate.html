@@ -1,0 +1,138 @@
+
+
+
+
+
+
+<div class="list-template event-list-template 2col-template">
+	<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+	<Grid gridId="firstGroupingGrid">
+		<IfEmpty>
+			<Include SRC="{{./}}/partials/list_empty_message_template.html"/>
+		</IfEmpty>
+		<Header>
+		<div class="list-wrapper">
+		</Header>
+			<h2 class="list-group-header">{{labelGroup}}</h2>
+			<If condition="'{{existSubGroup}}'=='no'">
+				<Grid gridId="firstLevelGrid_CIINSIDE_key_{{keyGroup}}">
+					<Include SRC="{{./}}partials/event_list_item_template.html"/>
+				</Grid>
+			</If>
+			<If condition="'{{existSubGroup}}'=='yes'">
+				<Grid gridId="secondLevelGrid_{{keyGroup}}">
+					<Header>
+					<div class="list-wrapper">
+					</Header>
+						<h4 class="list-group-header">{{labelSubGroup}}</h4>
+						<Grid gridId="{{keySubGroup}}">
+							<Include SRC="{{./}}partials/event_list_item_template.html"/>
+						</Grid>
+
+					<Footer>
+					</div>
+					</Footer>
+				</Grid>
+			</If>
+
+		<Footer>
+		</div>
+		<Include SRC="{{./}}partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>
+
+
+
+
+
+<div class="list-template event-list-template 2col-template">
+	<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+	<Grid gridId="firstGroupingGrid">
+		<IfEmpty>
+			<Include SRC="{{./}}/partials/list_empty_message_template.html"/>
+		</IfEmpty>
+		<Header>
+		<div class="list-wrapper">
+		</Header>
+
+			<If condition="'{{existSubGroup}}'=='no'">
+				<h2 class="list-group-header">{{labelGroup}}</h2>
+				<Grid gridId="firstLevelGrid_CIINSIDE_key_{{keyGroup}}">
+					<Include SRC="{{./}}partials/event_list_item_template.html"/>
+				</Grid>
+			</If>
+
+			<If condition="'{{existSubGroup}}'=='yes'">
+				<Grid gridId="secondLevelGrid_{{keyGroup}}">
+					<h2 class="list-group-header">{{labelGroup}} / {{labelSubGroup}}</h2>
+					<Grid gridId="{{keySubGroup}}">
+						<Include SRC="{{./}}partials/event_list_item_template.html"/>
+					</Grid>
+				</Grid>
+			</If>
+		<Footer>
+		</div>
+		<Include SRC="{{./}}partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="list-template event-list-template 2col-template">
+<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+	<Grid gridId="GroupedByPeriodGrid">
+		<IfEmpty>
+			<div class="list-wrapper">
+				<Grid gridId="gridDataSrc">
+					<IfEmpty>
+						<Include SRC="{{./}}/partials/list_empty_message_template.html"/>
+					</IfEmpty>
+					<Header>
+					<div class="row">
+					</Header>
+						<Include SRC="{{./}}partials/event_list_item_template.html"/>
+					<Separator>
+					<div class="col-md-12"><hr></div>
+					</Separator>
+					<Footer>
+					</div>
+					<Include SRC="{{./}}partials/list_footer.html"/>
+					</Footer>
+				</Grid>
+			</div>
+		</IfEmpty>
+		<Header>
+		<div class="list-wrapper">
+		</Header>
+			<div class="list-group-wrapper mb-3">
+				<h2 class="list-group-header">{{labelPeriod}}</h2>
+				<Grid gridId="GroupedByPeriodGrid_{{labelPeriodKey}}">
+					<IfEmpty>
+						<Include SRC="{{./}}/partials/list_empty_message_template.html"/>
+					</IfEmpty>
+					<Header>
+					<div class="row">
+					</Header>
+						<Include SRC="{{./}}partials/event_list_item_template.html"/>
+					<Separator>
+					<div class="col-md-12"><hr></div>
+					</Separator>
+					<Footer>
+					</div>
+					</Footer>
+				</Grid>
+			</div>
+		<Footer>
+		</div>
+		<Include SRC="{{./}}partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>

@@ -1,0 +1,143 @@
+<div id="contact-address-block" class="address-block">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="smart-form">
+				<section>
+					<label for="first_name" class="label">{{_first_name_mesg}}:</label>
+					<label class="input">
+						<input id="first_name" disabled name="first_name" type="text" value="{{esc_FirstName}}" class="form-control"data-rule-required="true" data-msg-required="{{enter_first_name}}" data-rule-htmlsanity="true">
+					</label>
+				</section>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="smart-form">
+				<section>
+					<label for="last_name" class="label">{{_last_name_mesg}}:</label>
+					<label class="input">
+						<input id="last_name" disabled name="last_name" value="{{esc_SecondName}}" type="text" class="form-control" data-rule-required="true" data-msg-required="{{enter_last_name}}" data-rule-htmlsanity="true">
+					</label>
+				</section>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" name="curr_email" value="{{esc_usr_email}}">
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="smart-form">
+				<section>
+					<label class="label" for="birthdate_regis" >{{_birthdate_mesg}}: </label>
+					<label class="input">
+						<i class="icon-prepend icon-calendar22"></i>
+						<input type="text" name="birthdate_regis" id="birthdate_regis" class="form-control datepicker daterange-basic" value="{{esc_usr_birthdate}}">
+					</label>
+				</section>
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+			<Var name="maleChecked">('{{usr_gender}}'=='Male' ? 'checked':'')</Var>
+			<Var name="femaleChecked">('{{usr_gender}}'=='Female' ? 'checked':'')</Var>
+			<div class="smart-form">
+				<section>
+					<label class="display-block label">{{_gender_mesg}}:</label>
+					<div class="inline-group">
+						<label class="radio">
+							<input type="radio" value="Male" name="usr_gender" {{maleChecked}}>
+							<i></i>{{_male}}
+						</label>
+						<label class="radio">
+							<input type="radio" value="Female" name="usr_gender" {{femaleChecked}}>
+							<i></i>{{_female}}
+						</label>
+					</div>
+			  </section>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="smart-form">
+				<section>
+					<label for="usr_mobile" class="label">{{_mobile_mesg}}:</label>
+					<label class="input">
+						<i class="icon-prepend  icon-mobile3"></i>
+						<input id="usr_mobile" name="usr_mobile" type="text" class="form-control" value="{{esc_usr_mobile}}" data-rule-htmlsanity="true">
+					</label>
+				</section>
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+			<div class="smart-form">
+				<section>
+					<label for="email_regis" class="label">* {{_email_mesg}}:</label>
+					<label class="input">
+						<i class="icon-prepend  icon-envelope"></i>
+						<input id="email_regis" name="email_regis" type="text" class="form-control" value="{{esc_usr_email}}" data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateEmail&curr_email={{esc_usr_email}}" data-msg-remote="{{email_address_already_registered}}" data-rule-email="true" data-msg-email="{{provide_valid_email_address}}" data-rule-required="true" data-msg-required="{{enter_email_address}}" data-rule-htmlsanity="true">
+					</label>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+  			<div class="smart-form">
+				<section>
+					<label for="usr_phone" class="label">{{_tel_mesg}}: </label>
+					<label class="input">
+						<i class="icon-prepend  icon-phone2"></i>
+						<input name="usr_phone" id="usr_phone" value="{{esc_usr_phone}}" class="form-control" data-rule-htmlsanity="true">
+					</label>
+				</section>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="smart-form">
+				<section>
+					<label for="usr_fax" class="label">{{_fax_mesg}}:</label>
+					<label class="input">
+						<i class="icon-prepend icon-phone"></i>
+						<input id="usr_fax" name="usr_fax" type="text" class="form-control" value="{{esc_usr_fax}}" data-rule-htmlsanity="true">
+					</label>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<div class="row">
+		<div class="col-sm-6">
+		 	<div class="smart-form">
+				<section>
+					<label for="usr_title" class="label">{{_title_mesg}}:</label>
+					<label class="input">
+						<input id="usr_title" name="usr_title" type="text" value="{{esc_usr_title}}" class="form-control">
+					</label>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" >
+		<div class="col-sm-12">
+			<div class="smart-form">
+				<section>
+					<label for="fax" class="label">{{_notes_mesg}}:</label>
+					<label class="textarea textarea-resizable">
+						<textarea name="Shenime" name = "fax" id ="fax" rows="3" class="custom-scroll" data-rule-htmlsanity="true">{{Shenime}}</textarea>
+					</label>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		modules.push('validate', 'datepicker');
+	</script>
+
+</div>

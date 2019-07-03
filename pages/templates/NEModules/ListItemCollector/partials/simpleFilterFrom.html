@@ -1,0 +1,142 @@
+<Grid gridId="gridToFilterSearchBlock">
+<Header>
+
+
+<div class="row">
+<div class="col-12">
+
+
+<div class="filter-header bg-grey-light mb-10 pb-10 px-0 pt-15">
+	<form name="simpleFilterForm_{{idstemp}}" id="simpleFilterForm_{{idstemp}}" action="javascript:simpleFilterForm('{{idstemp}}','{{objId}}','simple');" class="validate padding-0 ml-5 mr-5" role="form" method="post">
+		<input type="hidden" name="msv" valid="0,0,0,0,0,0" etiketa="msv" value="{{msvLst}}">
+
+</Header>
+		<div class="row mb-0" style="margin-left:-10px">
+				<If condition="'{{filter_enabled_title}}' == 'yes'">
+			        <div class="col-md-2 col-sm-4 col-xs-12">
+			           <div class="has-feedback has-feedback-left mt-5">
+			                <input type="text" class="form-control" placeholder="{{filter_label_title}}" name="flt_dc_title" value="{{flt_dc_title_term}}"
+			                	valid="0,0,0,0,0,0" etiketa="flt_dc_title">
+			                <div class="form-control-feedback">
+			                    <i class="icon-search4 text-size-base text-muted"></i>
+			                </div>
+			            </div>
+			        </div>
+		     	</If>
+				<If condition="'{{filter_enabled_abstract}}' == 'yes'">
+			        <div class="col-md-2 col-sm-4 col-xs-12">
+			           <div class="has-feedback has-feedback-left mt-5">
+			                <input type="text" class="form-control" placeholder="{{filter_label_abstract}}" name="flt_dc_abstract" value="{{flt_dc_abstract_term}}"
+			                	valid="0,0,0,0,0,0" etiketa="flt_dc_abstract">
+			                <div class="form-control-feedback">
+			                    <i class="icon-search4 text-size-base text-muted"></i>
+			                </div>
+			            </div>
+			        </div>
+		     	</If>
+				<If condition="'{{filter_enabled_source}}' == 'yes'">
+			        <div class="col-md-2 col-sm-4 col-xs-12">
+			           <div class="has-feedback has-feedback-left mt-5">
+			                <input type="text" class="form-control" placeholder="{{filter_label_source}}" name="flt_dc_source" value="{{flt_dc_source_term}}"
+			                	valid="0,0,0,0,0,0" etiketa="flt_dc_source">
+			                <div class="form-control-feedback">
+			                    <i class="icon-search4 text-size-base text-muted"></i>
+			                </div>
+			            </div>
+			        </div>
+		     	</If>
+				<If condition="'{{filter_enabled_sourceauthor}}' == 'yes'">
+			        <div class="col-md-2 col-sm-4 col-xs-12">
+			           <div class="has-feedback has-feedback-left mt-5">
+			                <input type="text" class="form-control" placeholder="{{filter_label_sourceauthor}}" name="flt_dc_sourceauthor" value="{{flt_dc_sourceauthor_term}}"
+			                	valid="0,0,0,0,0,0" etiketa="flt_dc_sourceauthor">
+			                <div class="form-control-feedback">
+			                    <i class="icon-search4 text-size-base text-muted"></i>
+			                </div>
+			            </div>
+			        </div>
+		     	</If>
+				<If condition="'{{filter_enabled_fulltext}}' == 'yes'">
+			        <div class="col-md-2 col-sm-4 col-xs-12">
+			           <div class="has-feedback has-feedback-left mt-5">
+			                <input type="text" class="form-control" placeholder="{{filter_label_fulltext}}" name="flt_dc_fulltext" value="{{flt_dc_fulltext_term}}"
+			                	valid="0,0,0,0,0,0" etiketa="flt_dc_fulltext">
+			                <div class="form-control-feedback">
+			                    <i class="icon-search4 text-size-base text-muted"></i>
+			                </div>
+			            </div>
+			        </div>
+		     	</If>
+				<If condition="'{{filter_enabled_dtrange}}' == 'yes'">
+					<div class="col-md-2 col-sm-4 col-xs-12">
+						<div class="input-group mt-5">
+							<span class="input-group-addon"><i class="icon-calendar22"></i></span>
+							<input class="form-control datepicker datefrom-filter" name="flt_dtrange_from" value="{{flt_dtrange_from_term}}"
+								data-datepicker-max="#picker-to-{{idstemp}}" id="picker-from-{{idstemp}}" valid="0,0,0,0,0,0"
+								etiketa="flt_dtrange_from" placeholder="{{filter_labelfrom_dtrange}}" type="text">
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-12">
+						<div class="input-group mt-5">
+							<span class="input-group-addon"><i class="icon-calendar22"></i></span>
+							<input class="form-control datepicker dateto-filter" name="flt_dtrange_to" value="{{flt_dtrange_to_term}}"
+							data-datepicker-min="#picker-from-{{idstemp}}" id="picker-to-{{idstemp}}"
+							valid="0,0,0,0,0,0" etiketa="flt_dtrange_to" placeholder="{{filter_labelto_dtrange}}" type="text">
+						</div>
+					</div>
+				</If>
+
+				<Grid gridId="gridConfKwBlockToFilter">
+				<Header>
+				</Header>
+					<Grid gridId="gridKwBlockToFilter_{{fid}}">
+					<Header>
+						<div class="col-md-2 col-sm-4 col-xs-12">
+							<label class="select mt-5"  style="width: 100%;">
+								<Var name="filterIsActiveLabel">('{{filterInFamilyEnabled}}'!='yes' ? '	{{fname}}' : '{{filterSelectedTermWithParents}}')</Var>
+								<select class="selectboxit-btn select-category" name="flt_kw_{{fid}}"
+									valid="0,0,0,0,0,0" etiketa="flt_kw_{{fid}}"  style="width: 100%;">
+									<option value="">{{filterIsActiveLabel}} (All)</option>
+					</Header>
+									<Var name="sel">('{{filterIsActive}}' == 'yes' ? 'selected': '')</Var>
+									<option value="{{fid}}_{{kid}}" {{sel}}>{{kwname}}
+										<If condition="'{{show_kw_nr_relation}}'=='yes'">
+										({{nrOfCiRelated}})
+										</If>
+									</option>
+					<Footer>
+								</select><i></i>
+							</label>
+						</div>
+					</Footer>
+					</Grid>
+				<Footer>
+				</Footer>
+				</Grid>
+
+		</div>
+		<div class="row mb-0 pt-10" style="margin-left:-10px">
+	        <div class="col-12">
+	            <div class="filterButtons mt-5">
+	            	<button type="submit" class="btn btn-default" id="submitEF_{{EF_id}}">
+	            		{{srcLbl_buton}}
+	            	</button>
+            		<button type="button" class="btn btn-default" onclick="javascript:form_clearAll('{{idstemp}}','{{objId}}');">
+            			{{srcLbl_resetbtn}}
+            		</button>
+	            </div>
+	        </div>
+		</div>
+
+
+<Footer>
+
+	</form>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+     modules.push('datepicker');
+</script>
+</Footer>
+</Grid>

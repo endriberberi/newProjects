@@ -1,0 +1,74 @@
+<Grid gridId="DocCachedInfo_{{asset_id}}">
+	<ul class="icons-list">
+		<If condition="'{{display_preview}}' != 'no'">
+			<If condition="'{{allowed_preview}}' == 'yes'">
+				<li class="ml-10">
+
+
+					<a  title="{{_DA_preview_iconlabel}}"  data-title="{{titleToAlt}}" data-view=""
+						data-key="{{identifier_type}}" data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+						data-url="{{identifier_key}}" href="{{stream_url}}"
+						class="pull-right ic_pos view-{{ico_type}}"
+						<If condition="'{{extension}}' == 'mp4' || '{{extension}}' == 'mp3'">
+						<Var name="imgIdBig">('{{imageBg_id}}'>0 ? '{{imageBg_id}}' : '{{imageSm_id}}')</Var>
+						<Grid gridId="DocCachedInfo_{{imgIdBig}}">
+							data-poster="{{link_url}}"
+						</Grid>
+						</If>
+						>
+						<If condition="'{{extension}}' == 'link-ref-play'">
+						<i class="icon-play"></i>
+						</If>
+						<If condition="'{{extension}}' == 'ref' || '{{extension}}' == 'link-ref'">
+						<i class="fa fa-fw fa-external-link item-action-icon"></i>
+						</If>
+						<If condition="'{{extension}}' == 'pdf'">
+						<i class="icon-square-up-right"></i>
+						</If>
+						<If condition="'{{extension}}' == 'mp4' || '{{extension}}' == 'mp3'">
+							<i class="icon-play"></i>
+						</If>
+					
+						<If condition="'{{ico_type}}' == 'image'">
+							<i class="icon-image2"></i>
+						</If>
+					</a>
+				</li>
+			</If>
+			
+			<If condition="'{{allowed_preview}}' == 'no'">
+				<li class="ml-10">
+					<a  title="{{_DA_previewnotallowed_iconlabel}}"  data-title="{{titleToAlt}}" data-key="{{identifier_type}}"
+						class="pull-right ic_pos" data-id="{{CID}}" data-url="{{identifier_key}}" href="javascript:;">
+							<i class=" disabled-icon icon-square-up-right" ></i>
+					</a>
+				</li>
+			</If>
+		</If>
+		<If condition="'{{display_download}}' != 'no'">
+			<li class="ml-10">
+				<a class="pull-right ic_pos download-item" data-id="{{CID}}" href="{{link_url}}" target="_blank">
+					<If condition="'{{allowed_download}}' == 'no'">
+						<i class="icon-download disabled download-item mr-2 item-action-icon" data-id="{{CID}}"  title="{{_DA_downloadunavailable_iconlabel}}"></i>
+					</If>
+					<If condition="'{{allowed_download}}' == 'yes'">
+						<i class="icon-download"  title="{{_DA_download_iconlabel}}"></i>
+					</If>
+				</a>
+			</li>
+		</If>
+		<If condition="'{{display_download}}' != 'no'">
+			<li class="ml-10">
+				<a class="pull-right ic_pos download-item" data-id="{{CID}}" href="{{link_url}}" target="_blank">
+					<If condition="'{{allowed_download}}' == 'no'">
+						<i class="icon-share3" data-id="{{CID}}"  title="{{_DA_downloadunavailable_iconlabel}}"></i>
+					</If>
+					<If condition="'{{allowed_download}}' == 'yes'">
+						<i class="icon-share3"  title="{{_DA_download_iconlabel}}"></i>
+					</If>
+				</a>
+			</li>
+		</If>
+
+	</ul>
+</Grid>

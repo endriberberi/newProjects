@@ -1,0 +1,40 @@
+<WebBox ID="mainLogin" Type="Container" Level="0" Case="Always" Editable="False">
+<WebBox ID="HeaderContainer" Type="Container" Tag="header" TagClass="bg-primary" Case="Always" Editable="False" Container="GlobalContainer">
+	<!-- Page header -->
+<div id="page-header" class="page-header bg-white">
+	<!-- Main navbar -->
+	<div id="primary-navbar" class="bg-ishp-primary navbar navbar-inverse {{paletevalue}}">
+		<div class="navbar-header">
+			<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+		</div>
+
+	</div>
+</div>
+</WebBox>
+
+
+<WebBox ID="MainContainer" Type="Container" Tag="section" TagClass="" Case="Always" Editable="False" Container="GlobalContainer">
+<div class="container">
+	<div class="content-wrapper" style="min-height:500px;">
+		<div  style="margin: 100px auto;">
+			<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/MainContent.html"/>
+		</div>
+	</div>
+</div>
+</WebBox>
+<WebBox ID="FooterContainer" Type="Container" Tag="footer" TagClass="" Case="Always" Editable="False" Container="GlobalContainer">
+	<div class="footer" style="position:absolute;bottom:0;left:0;right:0;height: 60px;vertical-align: middle;padding-top: 20px; background-color:#009270; color: #fff; ">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+				</div>
+				<div class="col-lg-6">
+				</div>
+			</div>
+		</div>
+	</div>
+</WebBox>
+<Include SRC="{{./}}footer_includes.html"/>
+</WebBox>
+

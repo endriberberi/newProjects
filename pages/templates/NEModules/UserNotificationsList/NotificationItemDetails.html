@@ -1,0 +1,15 @@
+<div id="alertInfo">
+	<Grid gridId="getUserNotification_{{ses_userid}}">
+		<h4>{{subjekti}}</h4>
+		<small class="text-muted"> {{record_timestamp}}</small>
+		<hr class="simple">
+		{{full_content}}
+		<If condition="'{{enable_action_link}}'=='y'">
+			<a href="javascript:void(0);" class="btn btn-xs btn-brand btn-outline">Action link</a>
+		</If>
+	</Grid>
+
+	<div class="modal-footer">
+		<a href="javascript:void(0);" data-dismiss="modal" class="btn btn-default btn-sm pull-right margin-left-10">Close</a>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+	<Grid gridId="GridAuthorNavFam_{{familiesRelated}}">
+	<Header>
+		<ul class="nav navbar-nav">
+			<Var name="home_active_class">('{{level_1}}' == '0' ? 'active' : '')</Var>
+			<li class="{{home_active_class}}"><a href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},0,0,0,0)')">Home</a></li>
+	</Header>
+		<Grid gridId="GridAuthorNavData_{{keyIden}}">
+			<Var name="has_child">('{{nr_of_childs}}' >0  ? 'yes' : 'no')</Var>
+			<Var name="active_class">('{{isActive}}' == 'yes' || '{{isActive}}' == 'actual' ? 'active' : '')</Var>
+			<Var name="last_child">('{{AllRecs}}' == '{{CurrentRecNr}}' ? 'last-child' : '')</Var>
+			<li class="dropdown mega-menu mega-menu-wide {{active_class}} {{has_child}} {{last_child}}">
+
+
+				<a href="{{link}}" class="">
+					{{label}}
+				</a>
+				
+				
+			</li>
+		</Grid>
+
+	<Footer>
+		</ul>
+</Footer>
+</Grid>

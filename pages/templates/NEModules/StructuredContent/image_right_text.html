@@ -1,0 +1,67 @@
+	
+	<div class="image-left-text">
+		<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+		<Grid gridId="Grid_StructuredContent">
+		<IfEmpty>
+		<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+	</IfEmpty>
+		<Header>
+		<div class="brand-marketing">
+			<div class="row">
+			</Header>
+				<div class="col-lg-6">
+
+					<If condition="'{{display_title}}' == 'yes'">
+						<h2>
+							<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+								<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+									{{titleToDisplay}}
+								</a>
+							</If>
+							<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+							{{titleToDisplay}}
+							</If>
+						</h2>
+					</If>
+
+					<If condition="'{{display_desc}}' == 'yes' && '{{dp_desc}}' == 'yes'">
+						<div class="bodytext">{{description}}</div>
+					</If>
+
+					<If condition="'{{display_content}}' == 'yes' && '{{exist_fullcontent}}' == 'yes'">
+						<div class="bodytext">{{fullcontent}}</div>
+					</If>
+
+					<If condition="'{{dp_labelUserDefinedLink}}' == 'yes' && '{{exist_link}}' == 'yes'">
+						<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}" role="button" class="btn btn-primary">{{labelUserDefinedLink}}</a>
+					</If>
+
+				</div>
+				<div class="col-lg-6">
+				<h2>
+					<If condition="'{{display_smallImg}}' == 'yes'">
+						<div class="img_wd mb-2">
+								<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+									<If condition="'{{linkToimage}}' == 'yes'">
+										<a href="{{hrefToDocOther}}"  title="{{titleToAlt}}">
+											<img class="img-fluid" src="{{link_url}}" alt=""/>
+										</a>
+									</If>
+									<If condition="'{{linkToimage}}' != 'yes'">
+										<img class="img-fluid" src="{{link_url}}" alt=""/>
+									</If>
+								</Grid>
+						</div>
+					</If>
+					</h2>
+				</div>
+			<Separator>
+			<div class="col-lg-12"><hr></div>
+			</Separator>
+			<Footer>
+			</div>
+		</div>
+		<Include SRC="{{NEMODULES_PATH}}ListItemCollector/network/partials/list_footer.html"/>
+		</Footer>
+		</Grid>
+	</div>

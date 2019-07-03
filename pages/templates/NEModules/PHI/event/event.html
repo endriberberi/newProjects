@@ -1,0 +1,23 @@
+<WebBox ID="event" MODE="Dynamic">
+<Include SRC="{{./}}../templates/template_1.html"/>
+
+<script language="javascript1.2">
+  url_download                = '{{APP_URL}}ajxDt.php?apprcss=download&uni={{uni}}&ln={{ln}}';
+
+  data_sot                    = '{{data_sot}}';
+
+  jo_me_e_madhe_se_mesg       = '{{jo_me_e_madhe_se_mesg}}';
+  jo_me_e_vogel_se_mesg       = '{{jo_me_e_vogel_se_mesg}}';
+  jo_me_e_madhe_se_sot_mesg   = '{{jo_me_e_madhe_se_sot_mesg}}';
+
+  alert_upload_doc_mesg        = '{{alert_upload_doc_mesg}}';
+  alert_ngarko_dokumentin_mesg = '{{alert_ngarko_dokumentin_mesg}}';
+
+  var f_app_array_js = new Array();
+  {{script_js_in_page}}
+
+</script>
+
+<script src="{{./}}event.js" type=text/javascript></script>
+
+</WebBox>

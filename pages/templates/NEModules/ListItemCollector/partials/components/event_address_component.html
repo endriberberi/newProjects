@@ -1,0 +1,32 @@
+<If condition="'{{display_address}}' == 'yes' && '{{addressBlockExist}}' == 'yes'">
+	<table class="w-100 mb-1">
+		<If condition="'{{dp_extrasLabels_locationblock}}' == 'yes'">
+			<td class="align-top pr-2" style="white-space: nowrap;">
+				<strong><i class="fa fa-map-marker" aria-hidden="true"></i> {{extrasLabels_locationblock}}</strong>
+			</td>
+		</If>
+		<td class="w-100">
+		<If condition="'{{dp_address_name}}' == 'yes'">
+			{{address_name}}
+		</If>
+		<If condition="'{{dp_street}}' == 'yes'">
+			{{street}}
+			<If condition="'{{street}}' != '' || '{{dp_zip}}' == 'yes' || '{{zip}}' != ''">
+			 |
+			</If>
+		</If>
+		<If condition="'{{dp_zip}}' == 'yes'">
+			{{zip}}
+		</If>
+		<If condition="'{{dp_location}}' == 'yes'">
+			{{location}}
+			<If condition="'{{display_country}}' == 'yes' && '{{dp_country}}' == 'yes'">
+			 |
+			</If>
+		</If>
+		<If condition="'{{display_country}}' == 'yes' && '{{dp_country}}' == 'yes'">
+			{{country}}
+		</If>
+		</td>
+	</table>
+</If>

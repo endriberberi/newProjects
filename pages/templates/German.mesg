@@ -1,0 +1,416 @@
+<Messages>
+<Message ID="home_mesg_new">
+Hausarztmodell
+</Message>
+<Message ID="home_mesg">
+Home
+</Message>
+<Message ID="copyright_mesg">
+All rights reserved © Walter 2009
+</Message>
+<Message ID="back_mesg">
+back
+</Message>
+<Message ID="publikuar_me_mesg">
+Published
+</Message>
+<Message ID="articles_mesg">
+articles
+</Message>
+<Message ID="page_mesg">
+page
+</Message>
+<Message ID="of_mesg">
+of
+</Message>
+<Message ID="to_mesg">
+to
+</Message>
+<Message ID="from_mesg">
+from
+</Message>
+<Message ID="close_mesg"> 
+Close
+</Message> 
+<Message ID="print_mesg"> 
+Print
+</Message> 
+<Message ID="email_mesg"> 
+Email
+</Message> 
+<Message ID="previews_page_alt_mesg"> 
+Previews
+</Message>
+<Message ID="next_page_alt_mesg"> 
+Next
+</Message>
+<Message ID="_fill_required_data">
+Please fill the requried data!
+</Message>
+<Message ID="_right_format_email">
+Please insert the right format of e-mail address!
+</Message>
+<Message ID="_right_format_number">
+Please insert the right format number!
+</Message>
+<Message ID="_Top"> 
+Top
+</Message> 
+<Message ID="_articles">
+Anzeige der Ergebnisse
+</Message>
+<Message ID="_von_insgesamt">
+von insgesamt
+</Message>
+<Message ID="_page">
+Page
+</Message>
+<Message ID="_of">
+bis
+</Message>
+<Message ID="_abstract_alt">
+View Abstracts
+</Message>
+<Message ID="_order_alt">
+Order articles
+</Message>
+<Message ID="_next_page_alt">
+Next Page
+</Message>
+<Message ID="_previews_page_alt">
+Previews Page
+</Message>
+<Message ID="_nr_articles_per_page">
+Nr. of articles
+</Message>
+<Message ID="_back">
+Back
+</Message>
+<Message ID="_top">
+Top
+</Message>
+<Message ID="_back_to_list">
+Back to list
+</Message>
+<Message ID="no_records_found">
+No records found!
+</Message>
+<Message ID="_no_articles_selected">
+Please select some articles!
+</Message>
+<Message ID="_filter">
+Search
+</Message>
+<Message ID="_term">
+Term 
+</Message>
+<Message ID="_author">
+Autor/en
+</Message>
+<Message ID="_Art">
+Art
+</Message>
+<Message ID="_print">
+print version
+</Message>
+<Message ID="_send_by_email">
+E-mail
+</Message>
+<Message ID="_quelle">
+Source Author
+</Message>
+<Message ID="_sendby">
+print
+</Message>
+<Message ID="_printby">
+send by e-mail
+</Message>
+<Message ID="_home">
+Start
+</Message>
+
+
+
+
+
+<Message ID="_Janar">
+Januar
+</Message>
+<Message ID="_Shkurt">
+Februar
+</Message>
+<Message ID="_Mars">
+März
+</Message>
+<Message ID="_Prill">
+April
+</Message>
+<Message ID="_Maj">
+Mai
+</Message>
+<Message ID="_Qershor">
+Juni
+</Message>
+<Message ID="_Korrik">
+Juli
+</Message>
+<Message ID="_Gusht">
+August
+</Message>
+<Message ID="_Shtator">
+September
+</Message>
+<Message ID="_Tetor">
+Oktober
+</Message>
+<Message ID="_Nentor">
+November
+</Message>
+<Message ID="_Dhjetor">
+Dezember
+</Message>
+
+
+
+<Message ID="_monday">
+Montag
+</Message>
+<Message ID="_tuesday">
+Dienstag
+</Message>
+<Message ID="_wednesday">
+Mittwoch
+</Message>
+<Message ID="_thursday">
+Donnerstag
+</Message>
+<Message ID="_friday">
+Freitag
+</Message>
+<Message ID="_saturday">
+Samstag
+</Message>
+<Message ID="_sunday">
+Sonntag
+</Message>
+
+
+<Message ID="_results_for_term">
+Suche nach
+</Message>
+<Message ID="_search">
+Suche
+</Message>
+<Message>
+------------------------------------------------- SearchModule_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="js_search_kriteria_more_than_mesg">
+Please redefine your search term! More than two characters required.
+</Message>
+<Message ID="search_alt_mesg">
+Search
+</Message>
+<Message ID="search_default_vl_input_mesg">
+Search
+</Message>
+<Message ID="search_etiketa_mesg">
+Search
+</Message>
+<Message>
+-------------------------------------------------- SearchModule_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- form_validate_mesazhet_fillim si p.sh contact module ---------------------
+</Message>
+<Message ID="field_reqiured_mesg">
+Bitte füllen sie dieses feld aus
+</Message>
+<Message ID="field_number_mesg">
+Please enter a valid number
+</Message>
+<Message ID="field_date_mesg">
+Please enter a valid date
+</Message>
+<Message ID="field_numberphone_mesg">
+Please enter a valid phone number
+</Message>
+<Message ID="field_email_mesg">
+Please enter a valid email address
+</Message>
+<Message ID="field_reqiured_email">
+Please provide a valid email address
+</Message>
+<Message ID="pass_leng">
+Your password must be at least 6 characters long!
+</Message>
+<Message ID="pass_match">
+Please enter the same password as above!
+</Message>
+
+
+
+
+
+
+
+<Message ID="_DA_previewnotallowed_iconlabel">
+View Item
+</Message>
+
+
+
+
+
+
+<Message ID="_source">
+Publisher
+</Message>
+
+
+
+
+
+<Message ID="_W">
+W
+</Message>
+<Message ID="_M">
+M
+</Message>
+
+<Message ID="_ja">
+Ja
+</Message>
+<Message ID="_nein">
+Nein
+</Message>
+<Message ID="_home_visit_y">
+ja
+</Message>
+<Message ID="_home_visit_n">
+nein
+</Message>
+<Message ID="_Parterre">
+Parterre
+</Message>
+<Message ID="_Ja">
+Ja
+</Message>
+<Message ID="_Nein">
+Nein
+</Message>
+<Message ID="_unter_5">
+Unter 5 min
+</Message>
+<Message ID="_uber_5">
+Über 5 min
+</Message>
+<Message ID="_fill_required_data">
+Füllen Sie bitte alle Felder korrekt aus! 
+</Message>
+<Message ID="_pass_dont_much">
+Das Passwort ist nicht korrekt
+</Message>
+<Message ID="_right_format_number">
+Bitte fügen Sie eine gültige Zahl ein!
+</Message>
+<Message ID="_right_format_alfa">
+Bitte fügen Sie ein gültiges Format ein!
+</Message>
+<Message ID="_right_format_integer">
+Bitte fügen Sie eine gültige Zahlen ein!
+</Message>
+<Message ID="_search_kriteria_more_than">
+Bitte fügen Sie ein Wort mit mehr als zwei Buchstaben ein!
+</Message>
+<Message ID="_search_kriteria_more_than">
+Bitte geben Sie die Suchkriterien ein!
+</Message>
+<Message ID="_required_field">	
+Required field! 
+</Message>
+<Message ID="_right_format_url">
+Please input a valid url address!
+</Message>
+<Message ID="_right_format_iban">
+IBAN format is not valid
+</Message>
+<Message ID="_right_format_date">
+Bitte fügen Sie an gültiges Datum ein!
+</Message>
+<Message ID="_right_format_email">
+Bitte fügen Sie eine gültige E-Mail Adresse ein!
+</Message>	   
+<Message ID="_saveBtn">
+Speichern
+</Message>
+<Message ID="_savingData">
+Saving data...
+</Message>
+<Message ID="_saveSuccesfull">
+Saved Succesfully!
+</Message>
+<Message ID="_errorOccured">
+An error has occured. Please try again or contact administrator if problem persists!
+</Message>
+<Message ID="_parkim_shenime">
+Parkplätze
+</Message>
+
+<Message ID="_switched_to_members">
+You have switched to member: 
+</Message>
+<Message ID="_switch_members_link_label">
+Arzt-Auswahl
+</Message>
+<Message ID="_switch_members_title_window">
+Arzt-Auswahl
+</Message>
+<Message ID="_select_filter_label">
+Filter
+</Message>
+<Message ID="_select_header_title">
+Mitgliederliste
+</Message>
+<Message ID="_close_window">
+Close
+</Message>
+<Message ID="_switch_back_to_user">
+Cancel Switch
+</Message>
+<Message ID="_you_are_not_a_member">
+Sie sind kein Mitglied!
+</Message>
+<Message ID="_user_roles">
+Funktionen
+</Message>
+<Message ID="_tel_privat">
+Tel. Privat
+</Message>
+<Message ID="_tel_mobile">
+Natel
+</Message>
+<Message ID="_tel_network">
+Tel. Komm.
+</Message>
+<Message ID="_fax_praxis">
+Fax Praxis
+</Message>
+<Message ID="_fax_company">
+Fax Praxis
+</Message>
+<Message ID="_fax_privat">
+Fax Privat
+</Message>
+<Message ID="_fax_network">
+Fax Komm
+</Message>
+<Message ID="_website">
+Website url
+</Message>
+<Message ID="_email_network">
+e-mail Komm
+</Message>
+<Message ID="_email_hin">
+e-mail HIN
+</Message>
+</Messages>

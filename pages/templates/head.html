@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+	<!-- Chooses the latest browser -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<Include SRC="{{./}}MetatagTemplate/MetatagTemplate.html"/>
+	<Include SRC="{{./}}MainContainer/ExternalTagsArea/ExternalTagsArea.html"/>
+
+	<!-- Global stylesheets -->
+	<If condition="'{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes'">
+	<link href="{{APP_URL}}include_css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+	</If>
+	<link href="{{APP_URL}}include_css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="{{APP_URL}}include_css/myStyle.css" rel="stylesheet" type="text/css">
+	<link href="{{APP_URL}}include_css/mpesa-styles.css" rel="stylesheet" type="text/css">
+
+	<link href="{{APP_URL}}include_css/toastr.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+    <script language="JavaScript" src="{{APP_URL}}include_js/valid_fun/fun.js"></script>
+    <script language="JavaScript" src="{{APP_URL}}include_js/valid_fun/valid_value.js"></script>
+
+  <SCRIPT language="javascript1.2">
+	alert_isnull_mesg                = "{{alert_isnull_mesg}}";
+	alert_isalpha_mesg               = "{{alert_isalpha_mesg}}";
+	alert_isdate1_mesg               = "{{alert_isdate1_mesg}}";
+	alert_isdate2_mesg               = "{{alert_isdate2_mesg}}";
+	alert_isdate3_mesg               = "{{alert_isdate3_mesg}}";
+	alert_isemail_mesg               = "{{alert_isemail_mesg}}";
+	alert_isinteger_mesg             = "{{alert_isinteger_mesg}}";
+	alert_isnumber1_mesg             = "{{alert_isnumber1_mesg}}";
+	alert_isnumber_pozitiv_mesg      = "{{alert_isnumber_pozitiv_mesg}}";
+	alert_confirm_del_mesg           = "{{alert_confirm_del_mesg}}";
+	alert_isnumber_pozitiv_zero_mesg = "{{alert_isnumber_pozitiv_zero_mesg}}";
+
+  </SCRIPT>
+
+<!-- Core JS files -->
+	<script type="text/javascript" src="{{APP_URL}}include_js/libs.min.js?v=1.2"></script>
+	<script type="text/javascript" src="{{APP_URL}}include_js/main.js?v=1.2"></script>
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="{{APP_URL}}include_js/core/app.js"></script>
+	<!-- /theme JS files -->
+
+<script>
+	modules.push('ajax-module', 'modal', 'validate', 'pdf-viewer', 'video-player', 'image-html-viewer', 'viewer-gateway', 'datepicker');
+	modules.push('kw-list-controller');
+</script>
+<script>
+	function showToast(type, message, title, delay){
+		if (typeof type === 'undefined' || typeof message === 'undefined') {
+			return;
+		}
+		var toastdelay = 2
+		if (typeof delay !== 'undefined') {
+			toastdelay = delay;
+		}
+
+		toastr.options = {
+		  "closeButton": true,
+		  "debug": true,
+		  "progressBar": true,
+		  //"preventDuplicates": true,
+		  "positionClass": "toast-top-right",
+		  "onclick": null,
+		  "showDuration": "400",
+		  "hideDuration": "1000",
+		  "timeOut": toastdelay * 1000,
+		  "extendedTimeOut": "1000",
+		  "showEasing": "swing",
+		  "hideEasing": "linear",
+		  "showMethod": "fadeIn",
+		  "hideMethod": "fadeOut"
+		}
+
+		if (type === 'success') {
+			toastr.success(message)
+		}
+
+		if (type === 'warning') {
+			toastr.warning(message)
+		}
+		if (type === 'error') {
+			toastr.error(message)
+		}
+
+	}
+
+</script>
+<style>
+	.dropzone{
+		min-height:180px!important;
+		max-height:250px!important;
+	}
+</style>
+</head>
+<body class="sidebar-xs">

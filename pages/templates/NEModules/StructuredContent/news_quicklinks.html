@@ -1,0 +1,66 @@
+<div class="content-wrapper">
+	<Include SRC="{{./}}partials/default_header_property_template.html"/>
+		<Grid gridId="Grid_StructuredContent">
+			<Header>
+			<ul class="media-list search-results-list content-group">
+				<li class="media">
+				    <div class="media-body">
+		                <div class="row">
+		    </Header>
+	    					<div class="col-md-6">
+                            	<div class="media content-group mb-0">
+                            		<div class="item-content mt-20">
+										<If condition="'{{display_smallImg}}' == 'yes'">
+										<div class="media-left">
+											<If condition="'{{exist_link}}' == 'yes'">
+												<a title="{{titleToAlt}}" href="{{hrefToDocOther}}" class="">
+													<img class="img-responsive img-rounded media-preview" src="{{img_small_id_src}}" alt=""/>
+												</a>
+											</If>
+											<If condition="'{{exist_link}}' != 'yes'">
+												<img class="img-responsive img-rounded media-preview" src="{{img_small_id_src}}" alt=""/>
+											</If>
+										</div>
+										</If>
+										<div class="media-body">
+											<div class="card-block pt-0">
+												<If condition="'{{display_title}}' == 'yes'">
+													<h6 class="media-heading text-bold">
+													<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+														<a class="text-default"  href="{{hrefToDocOther}}">{{titleToDisplay}}</a>
+													</If>
+													<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+														{{titleToDisplay}}
+													</If>
+													</h6>
+												</If>
+												<If condition="'{{display_desc}}' == 'yes' && '{{dp_desc}}' == 'yes'">
+													<div class="card-text">{{description}}</div>
+												</If>
+												<If condition="'{{display_content}}' == 'yes' && '{{exist_fullcontent}}' == 'yes'">
+													<p>{{fullcontent}}</p>
+												</If>
+												<If condition="'{{dp_labelUserDefinedLink}}' == 'yes' && '{{exist_link}}' == 'yes'">
+													<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}" role="button" class="heading-text pull-left">{{labelUserDefinedLink}}<i class="icon-arrow-right14 position-right"></i></a>
+												</If>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<Separator>
+							<If condition="{{CurrentRecNr}}%2 == '0'">
+							<div class="col-md-12">
+               				<hr class="hidden-sm hidden-xs mt-0">
+               				</div>
+               				</If>
+            				<hr class="hidden-md hidden-lg mt-0">
+							</Separator>
+			<Footer>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<Footer>
+		</Grid>
+</div>
