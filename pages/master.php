@@ -1,1 +1,1 @@
-master type
+punime ne master
