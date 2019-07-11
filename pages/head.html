@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{languageCode}}">
+<head>
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<WebBox ID="HeadContainer" Type="Container" Level="0" Case="Always" Editable="False">
+	<Include SRC="{{./}}MetatagTemplate/MetatagTemplate.html"/>
+	</WebBox>
+	<Include SRC="{{APP_PATH}}graphics/appicon/appicon.html"/>
+
+	<If condition="'{{masterStyleSheet}}'=='default'">
+		<link href="{{APP_URL}}include_css/default/style.css?v1.2" rel="stylesheet" type="text/css">
+		<link href="{{APP_URL}}include_css/default/blaser-style.css" rel="stylesheet" type="text/css">
+	</If>
+
+
+	<link rel="preload" href="{{APP_URL}}include_css/default/fonts/font-awesome-4.7.0/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<script>
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+		!function(e){"use strict";var n=function(n,t,o){var i,r=e.document,d=r.createElement("link");if(t)i=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;i=a[a.length-1]}var l=r.styleSheets;d.rel="stylesheet",d.href=n,d.media="only x",function e(n){if(r.body)return n();setTimeout(function(){e(n)})}(function(){i.parentNode.insertBefore(d,t?i:i.nextSibling)});var f=function(e){for(var n=d.href,t=l.length;t--;)if(l[t].href===n)return e();setTimeout(function(){f(e)})};function s(){d.addEventListener&&d.removeEventListener("load",s),d.media=o||"all"}return d.addEventListener&&d.addEventListener("load",s),d.onloadcssdefined=f,f(s),d};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+		function onloadCSS(n,a){var t;function d(){!t&&a&&(t=!0,a.call(n))}n.addEventListener&&n.addEventListener("load",d),n.attachEvent&&n.attachEvent("onload",d),"isApplicationInstalled"in navigator&&"onloadcssdefined"in n&&n.onloadcssdefined(d)}
+		!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+	</script>
+
+	<Include SRC="{{./}}MainContainer/ExternalTagsArea/ExternalTagsArea.html"/>
+
+</head>
+<Var name="enable_edit_class">('{{masterZoneSpecialization}}' == 'internet' ? 'ew-block-content' : '')</Var>
+<Var name="master_class">('{{masterZoneSpecialization}}' != 'internet' ? 'intranet' : 'internet')</Var>
+<Var name="homepage_class">('{{level_1}}' == '0' ? 'homepage' : 'inpage')</Var>
+<Var name="has_internal_banner">('{{exist_internalbanner}}' == 'yes' && '{{level_1}}' != '0' ? 'has-internal-banner' : '')</Var>
+<body class="{{homepage_class}} {{master_class}}">
+<If condition="'{{masterZoneSpecialization}}'=='intranet'">
+<div class="header-print" style="display: none;">
+	<img src="{{APP_URL}}/graphics/logo.png" height="50px;">
+</div>
+</If>
